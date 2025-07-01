@@ -13,10 +13,8 @@ GameLoop::GameLoop(sf::RenderWindow& window, sf::Sprite& player)
     m_kirby.setSprite(player);
     //初始化背景
     m_background.loadTextures("assets/back_top.png","assets/back_bottom.png");
-    //初始化帧vector
-    for (int i = 0; i < Animation::frameCount; ++i) {
-        frames.emplace_back(Animation::startX + i * Animation::frameWidth, Animation::startY, Animation::frameWidth, Animation::frameHeight);
-    }
+    //初始化动画帧
+    initAnimation();
 }
 
 void GameLoop::run() {
@@ -67,10 +65,46 @@ void GameLoop::processEvents() {
     }
 }
 
+
+void GameLoop::initAnimation(){
+    // 行走动画
+    for (int i = 0; i < 10; ++i) {
+        walkAnimation.addFrame(sf::IntRect(
+            AnimationFrame::startX + i * AnimationFrame::frameWidth, AnimationFrame::startY, AnimationFrame::frameWidth, AnimationFrame::frameHeight
+        ));
+    }
+    // 跳跃动画
+    // 攻击动画
+    // ...
+}
+
+void GameLoop::updateAnimation(float deltaTime){
+    switch (currentState)
+    {
+    case AnimationState::Standing:
+        m_player.setTextureRect(standAnimation.update(deltaTime));
+        break;
+    case AnimationState::Walking:
+        m_player.setTextureRect(walkAnimation.update(deltaTime));
+        break;
+    case AnimationState::Falling:
+        m_player.setTextureRect(jumpAnimation.update(deltaTime));
+        if (jumpAnimation.isFinished()) {
+            currentState = m_kirby.getIsGround() ? AnimationState::Standing : AnimationState::Falling;
+        }
+        break;
+    case AnimationState::Attacking:
+        m_player.setTextureRect(attackAnimation.update(deltaTime));
+        break;
+    default:
+        break;
+    }
+}
+
 void GameLoop::update() {
     //计算帧时间
     float deltaTime = clock.restart().asSeconds();
-    elapsedTime += deltaTime;
+    // elapsedTime += deltaTime;
     // 处理键盘输入
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         if (m_player.getPosition().x > 0)
@@ -97,11 +131,7 @@ void GameLoop::update() {
             m_kirby.update(m_background);
     }
     //处理帧动画
-    if (elapsedTime >= frameTime) {
-        currentFrame = (currentFrame + 1) % Animation::frameCount;
-        m_player.setTextureRect(frames[currentFrame]);
-        elapsedTime = 0.0f;
-    }
+    updateAnimation(deltaTime);
     // 不由按键驱动的一直执行的重力掉落
     m_kirby.fall(deltaTime, m_background);
 }

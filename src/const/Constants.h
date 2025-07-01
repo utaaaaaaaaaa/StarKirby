@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 // 动画相关常量
-namespace Animation {
+namespace AnimationFrame {
     const int frameWidth = 25;   // 单帧宽度
     const int frameHeight = 20;  // 单帧高度
     const int startX = 2;        // 起始帧左上角X坐标

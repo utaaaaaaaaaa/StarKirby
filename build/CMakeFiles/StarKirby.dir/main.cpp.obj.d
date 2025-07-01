@@ -251,6 +251,7 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:\_Code\c++\StarKirby\main.cpp \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \
  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+ D:/_Code/c++/StarKirby/src/animation/Animation.h \
  D:/_Code/c++/StarKirby/src/core/KirbyManager.h \
  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/windows.h \
  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sdkddkver.h \

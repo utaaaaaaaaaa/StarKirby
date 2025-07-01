@@ -1,6 +1,6 @@
-CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: \
- D:\_Code\c++\StarKirby\src\core\KirbyManager.cpp \
- D:/_Code/c++/StarKirby/src/core/KirbyManager.h \
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: \
+ D:\_Code\c++\StarKirby\src\animation\Animation.cpp \
+ D:\_Code\c++\StarKirby\src\animation\Animation.h \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Window.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/System.hpp \
@@ -247,10 +247,4 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glsl.inl \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
- D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
- D:/_Code/c++/StarKirby/src/core/GameLoop.h \
- D:/_Code/c++/StarKirby/src/scene/Background.h \
- D:/_Code/c++/StarKirby/src/scene/Barrier.h \
- D:/_Code/c++/StarKirby/src/const/Constants.h \
- D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
- D:/_Code/c++/StarKirby/src/animation/Animation.h
+ D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp

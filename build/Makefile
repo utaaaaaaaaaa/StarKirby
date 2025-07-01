@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/animation/Animation.obj: src/animation/Animation.cpp.obj
+.PHONY : src/animation/Animation.obj
+
+# target to build an object file
+src/animation/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj
+.PHONY : src/animation/Animation.cpp.obj
+
+src/animation/Animation.i: src/animation/Animation.cpp.i
+.PHONY : src/animation/Animation.i
+
+# target to preprocess a source file
+src/animation/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.i
+.PHONY : src/animation/Animation.cpp.i
+
+src/animation/Animation.s: src/animation/Animation.cpp.s
+.PHONY : src/animation/Animation.s
+
+# target to generate assembly for a file
+src/animation/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.s
+.PHONY : src/animation/Animation.cpp.s
+
 src/core/GameLoop.obj: src/core/GameLoop.cpp.obj
 .PHONY : src/core/GameLoop.obj
 
@@ -284,6 +308,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/animation/Animation.obj
+	@echo ... src/animation/Animation.i
+	@echo ... src/animation/Animation.s
 	@echo ... src/core/GameLoop.obj
 	@echo ... src/core/GameLoop.i
 	@echo ... src/core/GameLoop.s

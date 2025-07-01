@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/_Code/c++/StarKirby/main.cpp" "CMakeFiles/StarKirby.dir/main.cpp.obj" "gcc" "CMakeFiles/StarKirby.dir/main.cpp.obj.d"
+  "D:/_Code/c++/StarKirby/src/animation/Animation.cpp" "CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj" "gcc" "CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj.d"
   "D:/_Code/c++/StarKirby/src/core/GameLoop.cpp" "CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj" "gcc" "CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj.d"
   "D:/_Code/c++/StarKirby/src/core/KirbyManager.cpp" "CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj" "gcc" "CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj.d"
   "D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.cpp" "CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj" "gcc" "CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj.d"

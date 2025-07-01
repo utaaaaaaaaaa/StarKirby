@@ -158,6 +158,21 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.s"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\entity\Character\MyKirby.cpp -o CMakeFiles\StarKirby.dir\src\entity\Character\MyKirby.cpp.s
 
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: D:/_Code/c++/StarKirby/src/animation/Animation.cpp
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj -MF CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.obj -c D:\_Code\c++\StarKirby\src\animation\Animation.cpp
+
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.i"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\_Code\c++\StarKirby\src\animation\Animation.cpp > CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.i
+
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.s"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\animation\Animation.cpp -o CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.s
+
 # Object files for target StarKirby
 StarKirby_OBJECTS = \
 "CMakeFiles/StarKirby.dir/main.cpp.obj" \
@@ -165,7 +180,8 @@ StarKirby_OBJECTS = \
 "CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj" \
-"CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj"
+"CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj" \
+"CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
 
 # External object files for target StarKirby
 StarKirby_EXTERNAL_OBJECTS =
@@ -176,6 +192,7 @@ StarKirby.exe: CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj
+StarKirby.exe: CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/build.make
 StarKirby.exe: D:/c++/lib/SFML-2.6.2/lib/libsfml-graphics-d.a
 StarKirby.exe: D:/c++/lib/SFML-2.6.2/lib/libsfml-window-d.a
@@ -183,7 +200,7 @@ StarKirby.exe: D:/c++/lib/SFML-2.6.2/lib/libsfml-system-d.a
 StarKirby.exe: CMakeFiles/StarKirby.dir/linkLibs.rsp
 StarKirby.exe: CMakeFiles/StarKirby.dir/objects1.rsp
 StarKirby.exe: CMakeFiles/StarKirby.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable StarKirby.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable StarKirby.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\StarKirby.dir\link.txt --verbose=$(VERBOSE)
 	D:\c++\lib\mingw64-13.1.0\bin\cmake.exe -E copy_directory D:/c++/lib/SFML-2.6.2/bin D:/_Code/c++/StarKirby/build
 

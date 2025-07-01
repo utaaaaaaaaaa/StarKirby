@@ -254,6 +254,7 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:/_Code/c++/StarKirby/main.cpp \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/KirbyManager.h \
   D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/windows.h \
   D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -500,6 +501,256 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:/_Code/c++/StarKirby/main.cpp \
   D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/winsvc.h \
   D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/mcx.h \
   D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/imm.h
+
+CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: D:/_Code/c++/StarKirby/src/animation/Animation.cpp \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Config.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Clock.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Export.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Time.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Err.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/requires_hosted.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++config.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/pstl_config.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ios \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iosfwd \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stringfwd.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/memoryfwd.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/postypes.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cwchar \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/wchar.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/corecrt.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw_mac.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/vadefs.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/swprintf.inl \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/exception \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/exception.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/exception_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/exception_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/cxxabi_init_exception.h \
+  D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stddef.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/crtdefs.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/typeinfo \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/hash_bytes.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/new \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/move.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/type_traits \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/nested_exception.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/char_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/localefwd.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++locale.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/clocale \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/locale.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stdio.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cctype \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/ctype.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ios_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/atomicity.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/errno.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sys/types.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/process.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/corecrt_startup.h \
+  D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
+  D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/limits.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/signal.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_signal.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/time.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sys/timeb.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_timeval.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_time.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_compat.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_unistd.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_classes.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/string \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/new_allocator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/functexcept.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/cpp_type_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ostream_insert.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/cxxabi_forced.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_iterator_base_funcs.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/concept_check.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/debug/assertions.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_iterator_base_types.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_iterator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/type_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ptr_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_function.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/binders.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/numeric_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_algobase.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_pair.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/utility.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/debug/debug.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/predefined_ops.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bit \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/refwrap.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/invoke.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/range_access.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/initializer_list \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_string.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/alloc_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/alloc_traits.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_construct.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/string_view \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/functional_hash.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/string_view.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/string_conversions.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstdlib \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stdlib.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/stdlib.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/malloc.h \
+  D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/std_abs.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstdio \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cerrno \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/charconv.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_string.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/memory_resource.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstddef \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/uses_allocator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/uses_allocator_args.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tuple \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_classes.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/system_error \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/error_constants.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/stdexcept \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/streambuf \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/streambuf.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_ios.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_facets.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cwctype \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/wctype.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/streambuf_iterator.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_facets.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_ios.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ostream.tcc \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/FileInputStream.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/InputStream.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/NonCopyable.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Lock.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/MemoryInputStream.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Mutex.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Sleep.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/String.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Utf.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/algorithm \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_algo.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/algorithmfwd.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_heap.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/uniform_int_dist.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_tempbuf.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_algorithm_defs.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/execution_defs.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/locale \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_facets_nonio.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ctime \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/time_members.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/messages_members.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/codecvt.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_facets_nonio.tcc \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/locale_conv.h \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Utf.inl \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iterator \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stream_iterator.h \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/String.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Thread.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Thread.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/ThreadLocal.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/ThreadLocalPtr.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/ThreadLocalPtr.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector2.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector2.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector3.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector3.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Clipboard.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Export.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Context.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/GlResource.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/ContextSettings.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Cursor.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Event.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Joystick.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Keyboard.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Mouse.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Sensor.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Touch.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/VideoMode.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/vector \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_uninitialized.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_vector.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_bvector.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/vector.tcc \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Window.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/WindowBase.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/Vulkan.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/WindowHandle.hpp \
+  D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+  D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stdint.h \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Window/WindowStyle.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/BlendMode.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Export.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/CircleShape.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Shape.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Drawable.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RenderStates.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Transform.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Rect.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Rect.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Transformable.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexArray.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Vertex.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Color.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/PrimitiveType.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/ConvexShape.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Font.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glyph.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Texture.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Image.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/map \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_tree.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/aligned_buffer.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/node_handle.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_map.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_multimap.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/erase_if.h \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RectangleShape.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RenderTarget.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/View.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RenderTexture.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RenderWindow.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Shader.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glsl.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glsl.inl \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
+  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp
 
 CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/core/GameLoop.cpp \
   D:/_Code/c++/StarKirby/src/core/GameLoop.h \
@@ -754,6 +1005,7 @@ CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/c
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
@@ -1011,7 +1263,8 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
-  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h
+  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h
 
 CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.cpp \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
@@ -1990,6 +2243,8 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/bcrypt.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h:
 
+D:/_Code/c++/StarKirby/src/animation/Animation.cpp:
+
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/utilapiset.h:
@@ -2252,6 +2507,14 @@ D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glsl.inl:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/initializer_list:
 
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/shellapi.h:
+
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/excpt.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_ios.tcc:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr.h:
+
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/debug/assertions.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Shape.hpp:
@@ -2512,6 +2775,8 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512dqintr
 
 D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector2.inl:
 
+D:/_Code/c++/StarKirby/src/animation/Animation.h:
+
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/ctype.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/rpc.h:
@@ -2767,11 +3032,3 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clzerointrin
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/utility.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sdkddkver.h:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/shellapi.h:
-
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_ios.tcc:
-
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr.h:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/excpt.h:

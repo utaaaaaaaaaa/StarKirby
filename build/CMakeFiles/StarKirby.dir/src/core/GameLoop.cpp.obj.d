@@ -252,6 +252,7 @@ CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \
  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+ D:/_Code/c++/StarKirby/src/animation/Animation.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc

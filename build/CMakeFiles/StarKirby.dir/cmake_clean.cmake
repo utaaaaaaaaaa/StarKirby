@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/StarKirby.dir/main.cpp.obj"
   "CMakeFiles/StarKirby.dir/main.cpp.obj.d"
+  "CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
+  "CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj.d"
   "CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj"
   "CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj.d"
   "CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj"

@@ -21,6 +21,7 @@ add_executable(StarKirby
     src/scene/Background.cpp
     src/scene/Barrier.cpp
     src/entity/Character/MyKirby.cpp
+    src/animation/Animation.cpp
 )
 
 # 链接SFML库
