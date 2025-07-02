@@ -11,6 +11,7 @@ find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
 include_directories(
     ${CMAKE_SOURCE_DIR}/src  # 用于core/GameLoop.h形式的包含
     src/core                 # 用于直接包含头文件
+    src/entity/Character
 )
 
 # 添加可执行文件
@@ -18,9 +19,12 @@ add_executable(StarKirby
     main.cpp
     src/core/GameLoop.cpp
     src/core/KirbyManager.cpp
+    src/core/EnemyManager.cpp
     src/scene/Background.cpp
     src/scene/Barrier.cpp
     src/entity/Character/MyKirby.cpp
+    src/entity/Enemy/SparkEnemy.cpp
+    src/entity/Enemy/Enemy.cpp
     src/animation/Animation.cpp
 )
 

@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "core/GameLoop.h"
 #include "core/KirbyManager.h"
+#include "core/EnemyManager.h"
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -20,8 +21,11 @@ int main()
     KirbyManager kirbyManager;
     sf::Sprite& kirby = kirbyManager.getKirby();
 
+    //创建敌人
+    EnemyManager enemyManager;
+
     // 创建并运行游戏循环
-    GameLoop gameLoop(window, kirby);
+    GameLoop gameLoop(window, kirby, enemyManager);
     gameLoop.run();
 
     return 0;

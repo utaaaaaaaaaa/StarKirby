@@ -13,7 +13,7 @@ public:
     void draw(sf::RenderWindow& window);
     void splitMap(sf::Sprite& sprite);
     bool loadFromFile(const std::string& filePath); // 从文件加载地面数据
-    Barrier getBarrier() {return m_barrier;};
+    Barrier& getBarrier() {return m_barrier;};
     const std::vector<sf::FloatRect>& getGroundRects() const { return groundRects; }
 
 private:

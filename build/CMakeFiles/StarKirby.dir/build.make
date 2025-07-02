@@ -113,11 +113,26 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.s"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\core\KirbyManager.cpp -o CMakeFiles\StarKirby.dir\src\core\KirbyManager.cpp.s
 
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: D:/_Code/c++/StarKirby/src/core/EnemyManager.cpp
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj -MF CMakeFiles\StarKirby.dir\src\core\EnemyManager.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\core\EnemyManager.cpp.obj -c D:\_Code\c++\StarKirby\src\core\EnemyManager.cpp
+
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.i"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\_Code\c++\StarKirby\src\core\EnemyManager.cpp > CMakeFiles\StarKirby.dir\src\core\EnemyManager.cpp.i
+
+CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.s"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\core\EnemyManager.cpp -o CMakeFiles\StarKirby.dir\src\core\EnemyManager.cpp.s
+
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj: D:/_Code/c++/StarKirby/src/scene/Background.cpp
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj -MF CMakeFiles\StarKirby.dir\src\scene\Background.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\scene\Background.cpp.obj -c D:\_Code\c++\StarKirby\src\scene\Background.cpp
 
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.i: cmake_force
@@ -132,7 +147,7 @@ CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj: CMakeFiles/StarKirby.dir/fla
 CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
 CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj: D:/_Code/c++/StarKirby/src/scene/Barrier.cpp
 CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj -MF CMakeFiles\StarKirby.dir\src\scene\Barrier.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\scene\Barrier.cpp.obj -c D:\_Code\c++\StarKirby\src\scene\Barrier.cpp
 
 CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.i: cmake_force
@@ -147,7 +162,7 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: CMakeFiles/StarKi
 CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
 CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.cpp
 CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj -MF CMakeFiles\StarKirby.dir\src\entity\Character\MyKirby.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\entity\Character\MyKirby.cpp.obj -c D:\_Code\c++\StarKirby\src\entity\Character\MyKirby.cpp
 
 CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.i: cmake_force
@@ -158,11 +173,41 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.s"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\entity\Character\MyKirby.cpp -o CMakeFiles\StarKirby.dir\src\entity\Character\MyKirby.cpp.s
 
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.cpp
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj -MF CMakeFiles\StarKirby.dir\src\entity\Enemy\SparkEnemy.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\entity\Enemy\SparkEnemy.cpp.obj -c D:\_Code\c++\StarKirby\src\entity\Enemy\SparkEnemy.cpp
+
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.i"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\_Code\c++\StarKirby\src\entity\Enemy\SparkEnemy.cpp > CMakeFiles\StarKirby.dir\src\entity\Enemy\SparkEnemy.cpp.i
+
+CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.s"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\entity\Enemy\SparkEnemy.cpp -o CMakeFiles\StarKirby.dir\src\entity\Enemy\SparkEnemy.cpp.s
+
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.cpp
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj -MF CMakeFiles\StarKirby.dir\src\entity\Enemy\Enemy.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\entity\Enemy\Enemy.cpp.obj -c D:\_Code\c++\StarKirby\src\entity\Enemy\Enemy.cpp
+
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.i"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\_Code\c++\StarKirby\src\entity\Enemy\Enemy.cpp > CMakeFiles\StarKirby.dir\src\entity\Enemy\Enemy.cpp.i
+
+CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.s"
+	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\_Code\c++\StarKirby\src\entity\Enemy\Enemy.cpp -o CMakeFiles\StarKirby.dir\src\entity\Enemy\Enemy.cpp.s
+
 CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/flags.make
 CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/includes_CXX.rsp
 CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: D:/_Code/c++/StarKirby/src/animation/Animation.cpp
 CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj: CMakeFiles/StarKirby.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
 	D:\c++\lib\mingw64-13.1.0\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj -MF CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.obj.d -o CMakeFiles\StarKirby.dir\src\animation\Animation.cpp.obj -c D:\_Code\c++\StarKirby\src\animation\Animation.cpp
 
 CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.i: cmake_force
@@ -178,9 +223,12 @@ StarKirby_OBJECTS = \
 "CMakeFiles/StarKirby.dir/main.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj" \
+"CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj" \
+"CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj" \
+"CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj" \
 "CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj"
 
 # External object files for target StarKirby
@@ -189,9 +237,12 @@ StarKirby_EXTERNAL_OBJECTS =
 StarKirby.exe: CMakeFiles/StarKirby.dir/main.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj
+StarKirby.exe: CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/scene/Barrier.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj
+StarKirby.exe: CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj
+StarKirby.exe: CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.obj
 StarKirby.exe: CMakeFiles/StarKirby.dir/build.make
 StarKirby.exe: D:/c++/lib/SFML-2.6.2/lib/libsfml-graphics-d.a
@@ -200,7 +251,7 @@ StarKirby.exe: D:/c++/lib/SFML-2.6.2/lib/libsfml-system-d.a
 StarKirby.exe: CMakeFiles/StarKirby.dir/linkLibs.rsp
 StarKirby.exe: CMakeFiles/StarKirby.dir/objects1.rsp
 StarKirby.exe: CMakeFiles/StarKirby.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable StarKirby.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\_Code\c++\StarKirby\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable StarKirby.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\StarKirby.dir\link.txt --verbose=$(VERBOSE)
 	D:\c++\lib\mingw64-13.1.0\bin\cmake.exe -E copy_directory D:/c++/lib/SFML-2.6.2/bin D:/_Code/c++/StarKirby/build
 

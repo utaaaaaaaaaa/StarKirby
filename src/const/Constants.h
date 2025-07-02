@@ -5,11 +5,12 @@
 
 // 动画相关常量
 namespace AnimationFrame {
-    const int frameWidth = 25;   // 单帧宽度
-    const int frameHeight = 20;  // 单帧高度
-    const int startX = 2;        // 起始帧左上角X坐标
-    const int startY = 98;       // 起始帧左上角Y坐标
-    const int frameCount = 10;   // 动画总帧数
+    const sf::IntRect standAnimationRect = sf::IntRect(4,5,22,18);
+    const sf::IntRect walkAnimationRect = sf::IntRect(2,98,25,20);
+    const sf::IntRect jumpAnimationRect = sf::IntRect(5,73,20,20);
+    const sf::IntRect fallAnimationRect = sf::IntRect(180,73,20,20);
+    const sf::IntRect flyAnimationRect = sf::IntRect();
+    const sf::IntRect attackAnimationRect = sf::IntRect();
 }
 
 // 物理相关常量

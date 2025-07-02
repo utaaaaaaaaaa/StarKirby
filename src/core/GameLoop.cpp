@@ -4,13 +4,13 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+using namespace AnimationFrame;
 
-GameLoop::GameLoop(sf::RenderWindow& window, sf::Sprite& player) 
-    : m_window(window), m_player(player), m_kirby(MyKirby(player)) {
+
+GameLoop::GameLoop(sf::RenderWindow& window, sf::Sprite& player, EnemyManager& enemies) 
+    : m_window(window), m_player(player), m_kirby(MyKirby(player)), m_enemies(enemies) {
     // 保存原始窗口尺寸
     m_originalSize = window.getSize();
-    //初始化卡比对象
-    m_kirby.setSprite(player);
     //初始化背景
     m_background.loadTextures("assets/back_top.png","assets/back_bottom.png");
     //初始化动画帧
@@ -65,15 +65,37 @@ void GameLoop::processEvents() {
     }
 }
 
+void GameLoop::initEnemy(){
+
+}
 
 void GameLoop::initAnimation(){
+    // 站立动画
+    standAnimation.addFrame(standAnimationRect);
     // 行走动画
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 10; i++) {
         walkAnimation.addFrame(sf::IntRect(
-            AnimationFrame::startX + i * AnimationFrame::frameWidth, AnimationFrame::startY, AnimationFrame::frameWidth, AnimationFrame::frameHeight
+            walkAnimationRect.left + i * walkAnimationRect.width, walkAnimationRect.top, walkAnimationRect.width, walkAnimationRect.height
         ));
     }
     // 跳跃动画
+    for (int i=0;i<7 ;i++){
+        jumpAnimation.addFrame(sf::IntRect(
+            jumpAnimationRect.left + i * (jumpAnimationRect.width + 5),//多右移5个固定像素
+            jumpAnimationRect.top, jumpAnimationRect.width, jumpAnimationRect.height
+        ));
+        //跳跃动画不循环，每帧设置0.2s
+        jumpAnimation.play(0.1f,false);
+    }
+    // 降落动画
+    for (int i=0;i<2;i++){
+        fallAnimation.addFrame(sf::IntRect(
+            fallAnimationRect.left + i * (fallAnimationRect.width + 5),//多右移5个固定像素
+            fallAnimationRect.top, fallAnimationRect.width, fallAnimationRect.height
+        ));
+        //降落动画不循环，每帧设置0.2s
+        fallAnimation.play(0.1f,false);
+    }
     // 攻击动画
     // ...
 }
@@ -87,10 +109,16 @@ void GameLoop::updateAnimation(float deltaTime){
     case AnimationState::Walking:
         m_player.setTextureRect(walkAnimation.update(deltaTime));
         break;
-    case AnimationState::Falling:
+    case AnimationState::Jumping:
         m_player.setTextureRect(jumpAnimation.update(deltaTime));
         if (jumpAnimation.isFinished()) {
             currentState = m_kirby.getIsGround() ? AnimationState::Standing : AnimationState::Falling;
+        }
+        break;
+    case AnimationState::Falling:
+        m_player.setTextureRect(fallAnimation.update(deltaTime));
+        if (m_kirby.getIsGround()){
+            currentState = AnimationState::Standing;
         }
         break;
     case AnimationState::Attacking:
@@ -106,23 +134,31 @@ void GameLoop::update() {
     float deltaTime = clock.restart().asSeconds();
     // elapsedTime += deltaTime;
     // 处理键盘输入
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         if (m_player.getPosition().x > 0)
             // m_player.move(-m_speed, 0);
             m_kirby.setSpeed({-m_speed.x,m_kirby.getSpeed().y});
             m_kirby.update(m_background);
+            if(m_kirby.getIsGround()){
+                currentState = AnimationState::Walking;
+            }
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         if (m_player.getPosition().x < m_originalSize.x - m_player.getGlobalBounds().width)
             // m_player.move({m_speed.x, 0});
             m_kirby.setSpeed({m_speed.x,m_kirby.getSpeed().y});
             m_kirby.update(m_background);
+            if(m_kirby.getIsGround()){
+                currentState = AnimationState::Walking;
+            }
     }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && m_kirby.getIsGround()) {
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && m_kirby.getIsGround()) {
         if (m_player.getPosition().y > 0)
             // m_player.move({0, -m_speed.y});
             m_kirby.setSpeed({0, -m_speed.y});
             m_kirby.update(m_background);
+            currentState = AnimationState::Jumping;
+            jumpAnimation.play(0.1f, false); // 重置跳跃动画
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         if (m_player.getPosition().y < m_originalSize.y - m_player.getGlobalBounds().height)
@@ -130,15 +166,25 @@ void GameLoop::update() {
             m_kirby.setSpeed({0, m_speed.y});
             m_kirby.update(m_background);
     }
+    // 检测是否没有水平输入且不是原地起跳
+    bool noHorizontalInput = !sf::Keyboard::isKeyPressed(sf::Keyboard::A) && 
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::D) &&
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
+    if (noHorizontalInput && m_kirby.getIsGround()) {
+        currentState = AnimationState::Standing;
+    }
     //处理帧动画
     updateAnimation(deltaTime);
-    // 不由按键驱动的一直执行的重力掉落
+    //不由按键驱动的一直执行的重力掉落
     m_kirby.fall(deltaTime, m_background);
+    //敌人运动
+    m_enemies.updateAll(deltaTime,m_background);
 }
 
 void GameLoop::render() {
     m_window.clear();
     m_background.draw(m_window);
+    m_enemies.drawAll(m_window);
     m_window.draw(m_player);
     m_window.display();
 }

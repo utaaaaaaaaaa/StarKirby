@@ -15,7 +15,7 @@ public:
     void fall(float deltatime, Background& bg);
     void jump();
     void checkGroundCollision(Background& bg);
-    void checkBarrierCollision(Barrier barrier);
+    void checkBarrierCollision(Barrier& barrier);
     sf::Vector2f getSpeed(){return m_speed;};
     bool getIsGround(){return m_isGround;};
     void setSprite(sf::Sprite& player);

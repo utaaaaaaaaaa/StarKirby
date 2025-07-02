@@ -176,6 +176,30 @@ src/animation/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/animation/Animation.cpp.s
 .PHONY : src/animation/Animation.cpp.s
 
+src/core/EnemyManager.obj: src/core/EnemyManager.cpp.obj
+.PHONY : src/core/EnemyManager.obj
+
+# target to build an object file
+src/core/EnemyManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj
+.PHONY : src/core/EnemyManager.cpp.obj
+
+src/core/EnemyManager.i: src/core/EnemyManager.cpp.i
+.PHONY : src/core/EnemyManager.i
+
+# target to preprocess a source file
+src/core/EnemyManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.i
+.PHONY : src/core/EnemyManager.cpp.i
+
+src/core/EnemyManager.s: src/core/EnemyManager.cpp.s
+.PHONY : src/core/EnemyManager.s
+
+# target to generate assembly for a file
+src/core/EnemyManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.s
+.PHONY : src/core/EnemyManager.cpp.s
+
 src/core/GameLoop.obj: src/core/GameLoop.cpp.obj
 .PHONY : src/core/GameLoop.obj
 
@@ -248,6 +272,54 @@ src/entity/Character/MyKirby.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.s
 .PHONY : src/entity/Character/MyKirby.cpp.s
 
+src/entity/Enemy/Enemy.obj: src/entity/Enemy/Enemy.cpp.obj
+.PHONY : src/entity/Enemy/Enemy.obj
+
+# target to build an object file
+src/entity/Enemy/Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj
+.PHONY : src/entity/Enemy/Enemy.cpp.obj
+
+src/entity/Enemy/Enemy.i: src/entity/Enemy/Enemy.cpp.i
+.PHONY : src/entity/Enemy/Enemy.i
+
+# target to preprocess a source file
+src/entity/Enemy/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.i
+.PHONY : src/entity/Enemy/Enemy.cpp.i
+
+src/entity/Enemy/Enemy.s: src/entity/Enemy/Enemy.cpp.s
+.PHONY : src/entity/Enemy/Enemy.s
+
+# target to generate assembly for a file
+src/entity/Enemy/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.s
+.PHONY : src/entity/Enemy/Enemy.cpp.s
+
+src/entity/Enemy/SparkEnemy.obj: src/entity/Enemy/SparkEnemy.cpp.obj
+.PHONY : src/entity/Enemy/SparkEnemy.obj
+
+# target to build an object file
+src/entity/Enemy/SparkEnemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj
+.PHONY : src/entity/Enemy/SparkEnemy.cpp.obj
+
+src/entity/Enemy/SparkEnemy.i: src/entity/Enemy/SparkEnemy.cpp.i
+.PHONY : src/entity/Enemy/SparkEnemy.i
+
+# target to preprocess a source file
+src/entity/Enemy/SparkEnemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.i
+.PHONY : src/entity/Enemy/SparkEnemy.cpp.i
+
+src/entity/Enemy/SparkEnemy.s: src/entity/Enemy/SparkEnemy.cpp.s
+.PHONY : src/entity/Enemy/SparkEnemy.s
+
+# target to generate assembly for a file
+src/entity/Enemy/SparkEnemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\StarKirby.dir\build.make CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.s
+.PHONY : src/entity/Enemy/SparkEnemy.cpp.s
+
 src/scene/Background.obj: src/scene/Background.cpp.obj
 .PHONY : src/scene/Background.obj
 
@@ -311,6 +383,9 @@ help:
 	@echo ... src/animation/Animation.obj
 	@echo ... src/animation/Animation.i
 	@echo ... src/animation/Animation.s
+	@echo ... src/core/EnemyManager.obj
+	@echo ... src/core/EnemyManager.i
+	@echo ... src/core/EnemyManager.s
 	@echo ... src/core/GameLoop.obj
 	@echo ... src/core/GameLoop.i
 	@echo ... src/core/GameLoop.s
@@ -320,6 +395,12 @@ help:
 	@echo ... src/entity/Character/MyKirby.obj
 	@echo ... src/entity/Character/MyKirby.i
 	@echo ... src/entity/Character/MyKirby.s
+	@echo ... src/entity/Enemy/Enemy.obj
+	@echo ... src/entity/Enemy/Enemy.i
+	@echo ... src/entity/Enemy/Enemy.s
+	@echo ... src/entity/Enemy/SparkEnemy.obj
+	@echo ... src/entity/Enemy/SparkEnemy.i
+	@echo ... src/entity/Enemy/SparkEnemy.s
 	@echo ... src/scene/Background.obj
 	@echo ... src/scene/Background.i
 	@echo ... src/scene/Background.s

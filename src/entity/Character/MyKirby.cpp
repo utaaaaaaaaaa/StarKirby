@@ -59,29 +59,29 @@ void MyKirby::checkGroundCollision(Background& bg) {
     }
 }
 
-void MyKirby::checkBarrierCollision(Barrier barrier){
+void MyKirby::checkBarrierCollision(Barrier& barrier){
     sf::FloatRect kirbyRect = m_kirby.getGlobalBounds();
     int collisionDir = barrier.checkCollisionDirection(kirbyRect, m_speed);
     sf::FloatRect theOneBarrier = barrier.getTheOneBarrier();
     switch (collisionDir) {
         case 0:
             break;
-        case 1: // 站在障碍物上
+        case 1: //站在障碍物上
             m_speed.y = 0;
             m_isGround = true;
-            // 将角色精确放置在障碍物顶部
+            //将角色精确放置在障碍物顶部
             m_kirby.setPosition(m_kirby.getPosition().x, 
                                theOneBarrier.top - kirbyRect.height);
             break;
             
-        case 2: // 卡比左面碰撞(由于帧动画左边多出2像素，减去两像素重新检查一次碰撞)
-            // kirbyRect.left += 4;
-            // if(barrier.checkCollisionDirection(kirbyRect,m_speed)!=2)break;
+        case 2: //卡比左面碰撞(由于帧动画左边多出2像素，减去两像素重新检查一次碰撞)
+            //kirbyRect.left += 4;
+            //if(barrier.checkCollisionDirection(kirbyRect,m_speed)!=2)break;
             if(m_speed.x < 0){
                 m_speed.x = 0;
             }
             break;
-        case 3: // 顶部碰撞
+        case 3: //顶部碰撞
             m_speed.y = -m_speed.y;
             break;
         case 4: //卡比右面碰撞

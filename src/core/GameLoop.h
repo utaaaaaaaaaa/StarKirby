@@ -5,15 +5,19 @@
 #include <scene/Background.h>
 #include <entity/Character/MyKirby.h>
 #include <animation/Animation.h>
+#include "core/EnemyManager.h"
+#include <entity/Enemy/SparkEnemy.h>
 
 class GameLoop {
 public:
-    GameLoop(sf::RenderWindow& window, sf::Sprite& player);
+    GameLoop(sf::RenderWindow& window, sf::Sprite& player, EnemyManager& sparkEnemy);
     void run();
 
 private:
     //同步非阻塞处理事件（关闭窗口事件
     void processEvents();
+    //初始化敌人
+    void initEnemy();
     //初始化动画
     void initAnimation();
     //更新动画
@@ -26,6 +30,7 @@ private:
     sf::RenderWindow& m_window;
     sf::Sprite& m_player;
     MyKirby m_kirby; // 成员变量生命周期与GameLoop相同，不会频繁复制
+    EnemyManager m_enemies;
 
     Background m_background = Background();
     sf::Vector2f m_speed = {0.25,0.25};
@@ -42,8 +47,9 @@ private:
     Animation standAnimation;
     Animation walkAnimation;
     Animation jumpAnimation;
+    Animation fallAnimation;
     Animation attackAnimation;
-    AnimationState currentState = AnimationState::Walking;
+    AnimationState currentState = AnimationState::Standing;
 };
 
-#endif // GAME_LOOP_H
+#endif 
