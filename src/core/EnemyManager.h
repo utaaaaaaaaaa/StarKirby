@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <entity/Enemy/Enemy.h>
 #include <entity/Enemy/SparkEnemy.h>
+#include <animation/Animation.h>
 
 class EnemyManager {
 public:
@@ -18,6 +19,9 @@ private:
     sf::Texture m_texture;
     sf::Sprite m_sprite;
     SparkEnemy m_sparkEnemy;
+
+    //eneny动画
+    Animation sparkEnemyAnimation;
 };
 
 #endif

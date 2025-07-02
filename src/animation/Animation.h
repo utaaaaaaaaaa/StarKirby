@@ -22,6 +22,7 @@ public:
     sf::IntRect& update(float deltaTime);
     //动画是否完成
     bool isFinished();
+    void setFrames(std::vector<sf::IntRect> frameVec){frames = frameVec;}
 
 private:
     std::vector<sf::IntRect> frames;

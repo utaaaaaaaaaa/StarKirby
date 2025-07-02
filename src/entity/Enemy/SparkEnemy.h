@@ -8,7 +8,7 @@ class SparkEnemy : public Enemy {
 public: 
     SparkEnemy() = delete; //禁用默认构造
     SparkEnemy(sf::Sprite& sprite) : Enemy(sprite){
-        setSpeed({0.03f,0});
+        setSpeed({0.015f,0});
         setHealth(10);
     };
     void update(float deltaTime, Background& bg) override;

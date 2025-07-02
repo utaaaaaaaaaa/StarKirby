@@ -11,6 +11,13 @@ namespace AnimationFrame {
     const sf::IntRect fallAnimationRect = sf::IntRect(180,73,20,20);
     const sf::IntRect flyAnimationRect = sf::IntRect();
     const sf::IntRect attackAnimationRect = sf::IntRect();
+    //sparkEnemy动画参数
+    const std::vector<sf::IntRect> sparkEnemyAnimationRects = {
+        sf::IntRect(0,3,21,18),sf::IntRect(25,3,20,18),
+        sf::IntRect(51,3,24,18),sf::IntRect(77,3,23,18),
+        sf::IntRect(103,5,23,16),sf::IntRect(128,5,23,15),
+        sf::IntRect(155,3,19,18),sf::IntRect(177,3,19,18)
+    };
 }
 
 // 物理相关常量

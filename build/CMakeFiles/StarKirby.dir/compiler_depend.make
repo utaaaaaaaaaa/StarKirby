@@ -1011,7 +1011,8 @@ CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h
 
 CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/core/GameLoop.cpp \
   D:/_Code/c++/StarKirby/src/core/GameLoop.h \
