@@ -1,20 +1,23 @@
 #include "MyKirby.h"
+#include <iostream>
+#include "entity/Enemy/Enemy.h"
 
 MyKirby::MyKirby(sf::Sprite& player) 
-    : m_kirby(player) {}
+    : m_kirby(player) {
+        this->m_health = 5;
+        this->m_attack = 3;
+    }
 
 MyKirby::MyKirby(sf::Sprite& player, sf::Vector2f speed) 
-    : m_kirby(player), m_speed(speed) {}
+    : m_kirby(player), m_speed(speed) {
+        this->m_health = 5;
+        this->m_attack = 3;
+    }
 
-void MyKirby::update(Background& bg) {
-    // checkGroundCollision(bg);
-    // //重力作用的竖直方向自由落体
-    // if (!m_isGround) {
-    //     m_speed.y += m_gravity * deltatime; 
-    //     m_kirby.move(0,m_speed.y);  
-    // } 
-    //卡比水平方向移动
+void MyKirby::update(float deltaTime, Background& bg) {
+    //障碍物碰撞检测
     checkBarrierCollision(bg.getBarrier());
+    //卡比水平方向移动
     m_kirby.move(m_speed.x,0);
 }
 
@@ -89,6 +92,32 @@ void MyKirby::checkBarrierCollision(Barrier& barrier){
                 m_speed.x = 0;
             }
             break;
+    }
+}
+
+void MyKirby::checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies){
+    sf::FloatRect kirbyBounds = m_kirby.getGlobalBounds();
+    for(auto& enemy : enemies){
+        sf::FloatRect enemyBounds = enemy->getSprite().getGlobalBounds();
+        if (kirbyBounds.intersects(enemyBounds)) {
+            //普通碰撞(如果没有无敌状态)
+            if(!m_isNoHarm){
+                m_health -= enemy->getAttack();
+                std::cout<<"HP: "<<m_health<<std::endl;
+                //设置为无敌并重置计时器
+                m_isNoHarm = true;
+                m_invincibilityClock.restart();
+                break;
+            }
+        }
+    }
+}
+
+void MyKirby::updateInvincibility(){
+    if (m_isNoHarm) {
+        if (m_invincibilityClock.getElapsedTime().asSeconds() >= m_invincibilityDuration) {
+            m_isNoHarm = false;
+        }
     }
 }
 

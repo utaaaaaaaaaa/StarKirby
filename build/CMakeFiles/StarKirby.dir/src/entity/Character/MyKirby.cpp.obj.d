@@ -248,6 +248,23 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
  D:/_Code/c++/StarKirby/src/scene/Background.h \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
- D:/_Code/c++/StarKirby/src/const/Constants.h
+ D:/_Code/c++/StarKirby/src/const/Constants.h \
+ D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc

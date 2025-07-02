@@ -10,6 +10,7 @@ public:
     SparkEnemy(sf::Sprite& sprite) : Enemy(sprite){
         setSpeed({0.015f,0});
         setHealth(10);
+        m_attack = 1;
     };
     void update(float deltaTime, Background& bg) override;
     void takeDamage(int amount) override;

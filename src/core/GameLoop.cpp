@@ -8,7 +8,7 @@ using namespace AnimationFrame;
 
 
 GameLoop::GameLoop(sf::RenderWindow& window, sf::Sprite& player, EnemyManager& enemies) 
-    : m_window(window), m_player(player), m_kirby(MyKirby(player)), m_enemies(enemies) {
+    : m_window(window), m_player(player), m_kirby(MyKirby(player)), m_enemyManager(enemies), m_enemies(enemies.getEnemies()) {
     // 保存原始窗口尺寸
     m_originalSize = window.getSize();
     //初始化背景
@@ -138,7 +138,7 @@ void GameLoop::update() {
         if (m_player.getPosition().x > 0)
             // m_player.move(-m_speed, 0);
             m_kirby.setSpeed({-m_speed.x,m_kirby.getSpeed().y});
-            m_kirby.update(m_background);
+            m_kirby.update(deltaTime, m_background);
             if(m_kirby.getIsGround()){
                 currentState = AnimationState::Walking;
             }
@@ -147,7 +147,7 @@ void GameLoop::update() {
         if (m_player.getPosition().x < m_originalSize.x - m_player.getGlobalBounds().width)
             // m_player.move({m_speed.x, 0});
             m_kirby.setSpeed({m_speed.x,m_kirby.getSpeed().y});
-            m_kirby.update(m_background);
+            m_kirby.update(deltaTime, m_background);
             if(m_kirby.getIsGround()){
                 currentState = AnimationState::Walking;
             }
@@ -156,7 +156,7 @@ void GameLoop::update() {
         if (m_player.getPosition().y > 0)
             // m_player.move({0, -m_speed.y});
             m_kirby.setSpeed({0, -m_speed.y});
-            m_kirby.update(m_background);
+            m_kirby.update(deltaTime, m_background);
             currentState = AnimationState::Jumping;
             jumpAnimation.play(0.1f, false); // 重置跳跃动画
     }
@@ -164,7 +164,7 @@ void GameLoop::update() {
         if (m_player.getPosition().y < m_originalSize.y - m_player.getGlobalBounds().height)
             // m_player.move({0, m_speed.y});
             m_kirby.setSpeed({0, m_speed.y});
-            m_kirby.update(m_background);
+            m_kirby.update(deltaTime, m_background);
     }
     // 检测是否没有水平输入且不是原地起跳
     bool noHorizontalInput = !sf::Keyboard::isKeyPressed(sf::Keyboard::A) && 
@@ -175,16 +175,18 @@ void GameLoop::update() {
     }
     //处理帧动画
     updateAnimation(deltaTime);
-    //不由按键驱动的一直执行的重力掉落
+    //不由按键驱动的一直执行的重力掉落、无敌状态检测、敌人碰撞检测
     m_kirby.fall(deltaTime, m_background);
+    m_kirby.updateInvincibility();
+    m_kirby.checkEnemyCollision(m_enemies);
     //敌人运动
-    m_enemies.updateAll(deltaTime,m_background);
+    m_enemyManager.updateAll(deltaTime,m_background);
 }
 
 void GameLoop::render() {
     m_window.clear();
     m_background.draw(m_window);
-    m_enemies.drawAll(m_window);
+    m_enemyManager.drawAll(m_window);
     m_window.draw(m_player);
     m_window.display();
 }

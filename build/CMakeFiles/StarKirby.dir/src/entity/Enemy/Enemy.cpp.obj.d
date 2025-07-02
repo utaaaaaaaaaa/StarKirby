@@ -248,7 +248,6 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
- D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
  D:/_Code/c++/StarKirby/src/scene/Background.h \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \

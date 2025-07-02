@@ -11,17 +11,17 @@ EnemyManager::EnemyManager()
     }
     m_sprite.setTexture(m_texture);
     m_sprite.setTextureRect(sparkEnemyAnimationRects[0]);
-    m_sprite.setPosition(290, 150 + 56 - 25); 
+    m_sprite.setPosition(250, 150 + 56 - 25); 
     //设置动画参数
     sparkEnemyAnimation.setFrames(sparkEnemyAnimationRects);
     sparkEnemyAnimation.play(0.12f);
+    //添加所有敌人到统一容器
+    addEnemy(m_sparkEnemy);
 }
 
-SparkEnemy& EnemyManager::getSparkEnemy(){
-    return m_sparkEnemy;
-}
 
-void EnemyManager::addEnemy(const Enemy& enemy){
+void EnemyManager::addEnemy(SparkEnemy& enemy){
+    m_enemies.push_back(std::make_shared<SparkEnemy>(enemy));
 };
 
 void EnemyManager::updateAll(float deltaTime, Background& bg){

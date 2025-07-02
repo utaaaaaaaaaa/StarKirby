@@ -250,13 +250,26 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:/_Code/c++/StarKirby/main.cpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
   D:/_Code/c++/StarKirby/src/core/GameLoop.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/core/KirbyManager.h \
@@ -1005,8 +1018,20 @@ CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
-  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
@@ -1263,13 +1288,26 @@ CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/c
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
@@ -1526,13 +1564,26 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
   D:/_Code/c++/StarKirby/src/core/GameLoop.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h
 
@@ -1785,9 +1836,26 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: D:/_Code/c++/Star
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
-  D:/_Code/c++/StarKirby/src/const/Constants.h
+  D:/_Code/c++/StarKirby/src/const/Constants.h \
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
 
 CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.cpp \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
@@ -2038,7 +2106,6 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: D:/_Code/c++/StarKirby/
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
-  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
@@ -2296,7 +2363,6 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: D:/_Code/c++/StarK
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
-  D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
@@ -2872,8 +2938,6 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/rpcdce.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/nb30.h:
 
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/timeapi.h:
-
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/playsoundapi.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/mmiscapi.h:
@@ -2978,10 +3042,6 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/rpcnsip.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bitalgintrin.h:
 
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/memoryapi.h:
-
-D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vpopcntdqvlintrin.h:
-
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2vlintrin.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2intrin.h:
@@ -3022,8 +3082,6 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avxvnniint8i
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/wmmintrin.h:
 
-D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h:
-
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/bcrypt.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h:
@@ -3057,10 +3115,6 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/serializeint
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pshpack2.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/rtmintrin.h:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/processtopologyapi.h:
-
-D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pkuintrin.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vnnivlintrin.h:
 
@@ -3134,15 +3188,43 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/windows.h:
 
 D:/_Code/c++/StarKirby/src/core/KirbyManager.h:
 
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/charconv.h:
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/oaidl.h:
 
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstdio:
+D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h:
+
+D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/uintrintrin.h:
+
+D:/_Code/c++/StarKirby/src/core/EnemyManager.h:
+
+D:/_Code/c++/StarKirby/src/animation/Animation.h:
+
+D:/_Code/c++/StarKirby/src/const/Constants.h:
+
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/commdlg.h:
+
+D:/_Code/c++/StarKirby/src/scene/Barrier.h:
+
+D:/_Code/c++/StarKirby/src/scene/Background.h:
+
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/memoryapi.h:
+
+D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vpopcntdqvlintrin.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h:
+
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/processtopologyapi.h:
+
+D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pkuintrin.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_base.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_atomic.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/charconv.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/std_abs.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/functional_hash.h:
-
-D:/_Code/c++/StarKirby/src/const/Constants.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_compat.h:
 
@@ -3205,10 +3287,6 @@ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/concept_check.h:
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/imm.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/commdlg.h:
-
-D:/_Code/c++/StarKirby/src/scene/Barrier.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/basic_string.tcc:
 
@@ -3288,6 +3366,10 @@ D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
+D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h:
+
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stdint.h:
+
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/hresetintrin.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Glsl.inl:
@@ -3330,6 +3412,8 @@ D:/c++/lib/SFML-2.6.2/include/SFML/Window/WindowHandle.hpp:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/hash_bytes.h:
 
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_raw_storage_iter.h:
+
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/cpp_type_traits.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/cpu_defines.h:
@@ -3363,6 +3447,10 @@ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_iterator_base_funcs.h:
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iosfwd:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread.h:
+
+D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h:
 
@@ -3440,10 +3528,6 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/concurrencysal.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/System/Time.hpp:
 
-D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/uintrintrin.h:
-
-D:/_Code/c++/StarKirby/src/core/EnemyManager.h:
-
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/crtdefs.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/execution_defs.h:
@@ -3500,11 +3584,9 @@ D:/c++/lib/SFML-2.6.2/include/SFML/Config.hpp:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/typeinfo:
 
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/allocated_ptr.h:
+
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/_mingw_off_t.h:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/oaidl.h:
-
-D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/string_conversions.h:
 
@@ -3544,6 +3626,8 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/pthread_time.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/exception_ptr.h:
 
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h:
+
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/aligned_buffer.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h:
@@ -3566,6 +3650,12 @@ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/move.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/codecvt.h:
 
+D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ostream_insert.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/new:
+
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/winver.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ios:
@@ -3575,8 +3665,6 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/locale.h:
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512dqintrin.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/System/Vector2.inl:
-
-D:/_Code/c++/StarKirby/src/animation/Animation.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/ctype.h:
 
@@ -3605,10 +3693,6 @@ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/sys/types.h:
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/os_defines.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/stdexcept:
-
-D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/stdint.h:
-
-D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/objbase.h:
 
@@ -3652,6 +3736,10 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/keylockerint
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/View.hpp:
 
+D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/timeapi.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unique_ptr.h:
+
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/algorithmfwd.h:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_tempbuf.h:
@@ -3667,8 +3755,6 @@ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/uniform_int_dist.h:
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/time_members.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RenderTarget.hpp:
-
-D:/_Code/c++/StarKirby/src/scene/Background.h:
 
 D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/prfchwintrin.h:
 
@@ -3770,8 +3856,6 @@ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/uses_allocator_args.h:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/BlendMode.hpp:
 
-D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Export.hpp:
-
 D:/c++/lib/SFML-2.6.2/include/SFML/System/Thread.hpp:
 
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Drawable.hpp:
@@ -3818,14 +3902,22 @@ D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/ConvexShape.hpp:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/map:
 
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h:
+
 D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/RectangleShape.hpp:
 
 D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
 D:/_Code/c++/StarKirby/src/core/GameLoop.h:
 
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/ostream_insert.h:
+D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Export.hpp:
 
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/new:
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/memory:
 
-D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h:
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstdio:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/align.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/shared_ptr_base.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/ext/concurrence.h:

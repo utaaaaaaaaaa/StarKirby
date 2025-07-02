@@ -2,11 +2,13 @@
 #define GAME_LOOP_H
 
 #include <SFML/Graphics.hpp>
+#include <memory>
 #include <scene/Background.h>
 #include <entity/Character/MyKirby.h>
 #include <animation/Animation.h>
 #include "core/EnemyManager.h"
 #include <entity/Enemy/SparkEnemy.h>
+
 
 class GameLoop {
 public:
@@ -30,7 +32,8 @@ private:
     sf::RenderWindow& m_window;
     sf::Sprite& m_player;
     MyKirby m_kirby; // 成员变量生命周期与GameLoop相同，不会频繁复制
-    EnemyManager m_enemies;
+    EnemyManager m_enemyManager;
+    std::vector<std::shared_ptr<Enemy>>& m_enemies;
 
     Background m_background = Background();
     sf::Vector2f m_speed = {0.25,0.25};
