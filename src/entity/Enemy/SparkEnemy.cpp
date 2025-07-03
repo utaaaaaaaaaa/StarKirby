@@ -15,4 +15,5 @@ void SparkEnemy::update(float deltaTime, Background& bg){
 
 void SparkEnemy::takeDamage(int amount){
     m_health -= amount;
+    std::cout<<"Enemy-HP: "<<m_health<<std::endl;
 }

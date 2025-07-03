@@ -5,13 +5,11 @@
 MyKirby::MyKirby(sf::Sprite& player) 
     : m_kirby(player) {
         this->m_health = 5;
-        this->m_attack = 3;
     }
 
 MyKirby::MyKirby(sf::Sprite& player, sf::Vector2f speed) 
     : m_kirby(player), m_speed(speed) {
         this->m_health = 5;
-        this->m_attack = 3;
     }
 
 void MyKirby::update(float deltaTime, Background& bg) {
@@ -19,6 +17,8 @@ void MyKirby::update(float deltaTime, Background& bg) {
     checkBarrierCollision(bg.getBarrier());
     //卡比水平方向移动
     m_kirby.move(m_speed.x,0);
+    //根据速度方向改变卡比朝向
+    m_faceRight = m_speed.x >=0 ? true : false;
 }
 
 void MyKirby::walk(Background& bg) {
@@ -38,6 +38,14 @@ void MyKirby::fall(float deltatime, Background& bg) {
 
 void MyKirby::jump() {
 
+}
+
+void MyKirby::attack(){
+    if(!m_isAttacking){
+        m_isAttacking = true;
+        m_canDoDamge = true;
+        m_attackClock.restart();
+    }
 }
 
 void MyKirby::checkGroundCollision(Background& bg) {
@@ -103,7 +111,7 @@ void MyKirby::checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies){
             //普通碰撞(如果没有无敌状态)
             if(!m_isNoHarm){
                 m_health -= enemy->getAttack();
-                std::cout<<"HP: "<<m_health<<std::endl;
+                std::cout<<"Kirby-HP: "<<m_health<<std::endl;
                 //设置为无敌并重置计时器
                 m_isNoHarm = true;
                 m_invincibilityClock.restart();
@@ -113,10 +121,40 @@ void MyKirby::checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies){
     }
 }
 
+void MyKirby::checkAttackHit(std::vector<std::shared_ptr<Enemy>>& enemies){
+    sf::FloatRect attackArea = m_kirby.getGlobalBounds();
+    //计算攻击区域
+    if(m_faceRight){
+        attackArea.width += m_attackRange;
+    }else {
+        attackArea.left -= m_attackRange;
+        attackArea.width += m_attackRange;
+    }
+    //检测敌人是否在攻击区域
+    for(auto& enemy : enemies){
+        if(attackArea.intersects(enemy->getSprite().getGlobalBounds())){
+            //只有在卡比可以造成伤害时敌人受伤，防止瞬间多次伤害
+            if(m_canDoDamge){
+                enemy->takeDamage(m_attackDamage);
+                m_canDoDamge = false;
+            }
+        }
+    }
+}
+
 void MyKirby::updateInvincibility(){
     if (m_isNoHarm) {
         if (m_invincibilityClock.getElapsedTime().asSeconds() >= m_invincibilityDuration) {
             m_isNoHarm = false;
+        }
+    }
+}
+
+void MyKirby::updateAttackState(){
+    if(m_isAttacking){
+        if(m_attackClock.getElapsedTime().asSeconds() >=
+        m_attackDuration){
+            m_isAttacking = false;
         }
     }
 }

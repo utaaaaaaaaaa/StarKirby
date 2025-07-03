@@ -97,6 +97,8 @@ void GameLoop::initAnimation(){
         fallAnimation.play(0.1f,false);
     }
     // 攻击动画
+    attackAnimation.setFrames(attackAnimationRect);
+    attackAnimation.play(0.05f,false);
     // ...
 }
 
@@ -133,7 +135,7 @@ void GameLoop::update() {
     //计算帧时间
     float deltaTime = clock.restart().asSeconds();
     // elapsedTime += deltaTime;
-    // 处理键盘输入
+    //处理键盘输入
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         if (m_player.getPosition().x > 0)
             // m_player.move(-m_speed, 0);
@@ -158,19 +160,20 @@ void GameLoop::update() {
             m_kirby.setSpeed({0, -m_speed.y});
             m_kirby.update(deltaTime, m_background);
             currentState = AnimationState::Jumping;
-            jumpAnimation.play(0.1f, false); // 重置跳跃动画
+            jumpAnimation.play(0.1f, false); //重置跳跃动画
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        if (m_player.getPosition().y < m_originalSize.y - m_player.getGlobalBounds().height)
-            // m_player.move({0, m_speed.y});
-            m_kirby.setSpeed({0, m_speed.y});
-            m_kirby.update(deltaTime, m_background);
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && !m_kirby.getIsAttacking()) {
+        // m_kirby.update(deltaTime, m_background);
+        m_kirby.attack();
+        currentState = AnimationState::Attacking;
+        attackAnimation.play(0.05f,false);
     }
-    // 检测是否没有水平输入且不是原地起跳
+    //检测是否没有水平输入、不是原地起跳、没有在攻击
     bool noHorizontalInput = !sf::Keyboard::isKeyPressed(sf::Keyboard::A) && 
                          !sf::Keyboard::isKeyPressed(sf::Keyboard::D) &&
-                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
-    if (noHorizontalInput && m_kirby.getIsGround()) {
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Space) &&
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Z);
+    if (noHorizontalInput && m_kirby.getIsGround() && !m_kirby.getIsAttacking()) {
         currentState = AnimationState::Standing;
     }
     //处理帧动画
@@ -178,6 +181,8 @@ void GameLoop::update() {
     //不由按键驱动的一直执行的重力掉落、无敌状态检测、敌人碰撞检测
     m_kirby.fall(deltaTime, m_background);
     m_kirby.updateInvincibility();
+    m_kirby.updateAttackState();
+    m_kirby.checkAttackHit(m_enemies);
     m_kirby.checkEnemyCollision(m_enemies);
     //敌人运动
     m_enemyManager.updateAll(deltaTime,m_background);
