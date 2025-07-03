@@ -23,6 +23,13 @@ namespace AnimationFrame {
         sf::IntRect(103,5,23,16),sf::IntRect(128,5,23,15),
         sf::IntRect(155,3,19,18),sf::IntRect(177,3,19,18)
     };
+    //敌人死亡动画
+    const std::vector<sf::IntRect> enemyDeadAnimationRects = {
+        sf::IntRect(10,26,49,18),sf::IntRect(75,28,59,43),
+        sf::IntRect(156,19,63,64),sf::IntRect(238,19,85,64),
+        sf::IntRect(362,33,26,24),sf::IntRect(411,27,32,32),
+        sf::IntRect(464,27,33,32),sf::IntRect(1,1,1,1)
+    };
 }
 
 // 物理相关常量

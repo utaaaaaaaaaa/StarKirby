@@ -267,4 +267,5 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: \
  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
- D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
+ D:/_Code/c++/StarKirby/src/animation/Animation.h

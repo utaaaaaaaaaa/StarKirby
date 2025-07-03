@@ -262,9 +262,12 @@ CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
  D:/_Code/c++/StarKirby/src/scene/Background.h \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \
+ D:/_Code/c++/StarKirby/src/animation/Animation.h \
  D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
- D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
- D:/_Code/c++/StarKirby/src/animation/Animation.h
+ D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h

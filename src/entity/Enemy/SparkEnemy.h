@@ -3,17 +3,17 @@
 
 #include <SFML/Graphics.hpp>
 #include "Enemy.h"
+#include "const/Constants.h"
 
 class SparkEnemy : public Enemy {
 public: 
     SparkEnemy() = delete; //禁用默认构造
     SparkEnemy(sf::Sprite& sprite) : Enemy(sprite){
         setSpeed({0.015f,0});
-        setHealth(10);
+        setHealth(3);
         m_attack = 1;
     };
     void update(float deltaTime, Background& bg) override;
-    void takeDamage(int amount) override;
 
 private:
     float elapsedTime = 0.0f;

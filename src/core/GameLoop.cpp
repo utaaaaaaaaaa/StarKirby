@@ -178,6 +178,8 @@ void GameLoop::update() {
     }
     //处理帧动画
     updateAnimation(deltaTime);
+    //每帧更新敌人列表，确保enemyManager已经回收的死亡敌人不被访问（内存安全）
+    m_enemies = m_enemyManager.getEnemies();
     //不由按键驱动的一直执行的重力掉落、无敌状态检测、敌人碰撞检测
     m_kirby.fall(deltaTime, m_background);
     m_kirby.updateInvincibility();

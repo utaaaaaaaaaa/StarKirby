@@ -268,6 +268,9 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:/_Code/c++/StarKirby/main.cpp \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
@@ -1032,12 +1035,15 @@ CMakeFiles/StarKirby.dir/src/core/EnemyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
-  D:/_Code/c++/StarKirby/src/animation/Animation.h
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h
 
 CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/core/GameLoop.cpp \
   D:/_Code/c++/StarKirby/src/core/GameLoop.h \
@@ -1306,13 +1312,13 @@ CMakeFiles/StarKirby.dir/src/core/GameLoop.cpp.obj: D:/_Code/c++/StarKirby/src/c
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
-  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+  D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h
 
 CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: D:/_Code/c++/StarKirby/src/core/KirbyManager.cpp \
   D:/_Code/c++/StarKirby/src/core/KirbyManager.h \
@@ -1582,6 +1588,9 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: D:/_Code/c++/StarKirby/s
   D:/_Code/c++/StarKirby/src/const/Constants.h \
   D:/_Code/c++/StarKirby/src/entity/Character/MyKirby.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/animation/Animation.h \
   D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
@@ -1855,7 +1864,8 @@ CMakeFiles/StarKirby.dir/src/entity/Character/MyKirby.cpp.obj: D:/_Code/c++/Star
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
   D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
+  D:/_Code/c++/StarKirby/src/animation/Animation.h
 
 CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.cpp \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
@@ -2106,12 +2116,13 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: D:/_Code/c++/StarKirby/
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+  D:/_Code/c++/StarKirby/src/animation/Animation.h
 
 CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.cpp \
   D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
@@ -2363,12 +2374,13 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/SparkEnemy.cpp.obj: D:/_Code/c++/StarK
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
   D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
   D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
   D:/_Code/c++/StarKirby/src/scene/Barrier.h \
   D:/_Code/c++/StarKirby/src/const/Constants.h \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
-  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+  D:/_Code/c++/StarKirby/src/animation/Animation.h
 
 CMakeFiles/StarKirby.dir/src/scene/Background.cpp.obj: D:/_Code/c++/StarKirby/src/scene/Background.cpp \
   D:/_Code/c++/StarKirby/src/scene/Background.h \
@@ -2880,12 +2892,6 @@ D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.cpp:
 
 D:/_Code/c++/StarKirby/src/core/KirbyManager.cpp:
 
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc:
-
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream:
-
-D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream:
-
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/prsht.h:
 
 D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/mcx.h:
@@ -3197,6 +3203,12 @@ D:/c++/lib/mingw64-13.1.0/lib/gcc/x86_64-w64-mingw32/13.1.0/include/uintrintrin.
 D:/_Code/c++/StarKirby/src/core/EnemyManager.h:
 
 D:/_Code/c++/StarKirby/src/animation/Animation.h:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream:
+
+D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream:
 
 D:/_Code/c++/StarKirby/src/const/Constants.h:
 

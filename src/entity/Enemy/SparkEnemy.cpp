@@ -2,6 +2,11 @@
 #include <iostream>
 
 void SparkEnemy::update(float deltaTime, Background& bg){
+    //死亡检测
+    if(isDying()){
+        return; //跳过其他逻辑
+    }
+    //碰撞检测
     checkCollisions(bg);
     //每过一秒钟反转一次运动方向
     elapsedTime += deltaTime;
@@ -11,9 +16,4 @@ void SparkEnemy::update(float deltaTime, Background& bg){
         m_isBlock = false;
     }
     m_sprite.move(m_speed.x,0);
-}
-
-void SparkEnemy::takeDamage(int amount){
-    m_health -= amount;
-    std::cout<<"Enemy-HP: "<<m_health<<std::endl;
 }

@@ -14,17 +14,20 @@ public:
     std::vector<std::shared_ptr<Enemy>>& getEnemies(){return m_enemies;}
     void addEnemy(SparkEnemy& enemy);
     void updateAll(float deltaTime, Background& bg);
+    void updateAnimation(float deltaTime, std::shared_ptr<Enemy>);
     void drawAll(sf::RenderWindow& window);
     void clear();
 
 private:
     sf::Texture m_texture;
+    sf::Texture m_deathTexture;
     sf::Sprite m_sprite;
     SparkEnemy m_sparkEnemy;
     std::vector<std::shared_ptr<Enemy>> m_enemies;
 
     //eneny动画
     Animation sparkEnemyAnimation;
+    Animation enemyDeadAnimation;
 };
 
 #endif

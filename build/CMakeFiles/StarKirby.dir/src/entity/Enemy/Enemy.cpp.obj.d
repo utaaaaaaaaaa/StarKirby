@@ -248,9 +248,10 @@ CMakeFiles/StarKirby.dir/src/entity/Enemy/Enemy.cpp.obj: \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Sprite.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/Text.hpp \
  D:/c++/lib/SFML-2.6.2/include/SFML/Graphics/VertexBuffer.hpp \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
  D:/_Code/c++/StarKirby/src/scene/Background.h \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \
- D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/iostream \
- D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/istream \
- D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc
+ D:/_Code/c++/StarKirby/src/animation/Animation.h

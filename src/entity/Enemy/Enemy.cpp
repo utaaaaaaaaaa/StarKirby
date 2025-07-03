@@ -2,7 +2,8 @@
 #include <iostream>
 
 Enemy::Enemy(sf::Sprite& sprite, float gravity) 
-    : m_sprite(sprite), m_gravity(gravity) {}
+    : m_sprite(sprite), m_gravity(gravity) {
+    }
 
 void Enemy::checkCollisions(Background& bg){
     //===============checkGroundCollision==========================
