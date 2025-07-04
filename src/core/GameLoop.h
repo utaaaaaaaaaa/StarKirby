@@ -53,6 +53,8 @@ private:
     Animation jumpAnimation;
     Animation fallAnimation;
     Animation attackAnimation;
+    Animation flyingAnimation;
+    Animation flyPreAnimation;
     AnimationState currentState = AnimationState::Standing;
 };
 

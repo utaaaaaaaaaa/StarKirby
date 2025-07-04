@@ -9,7 +9,16 @@ namespace AnimationFrame {
     const sf::IntRect walkAnimationRect = sf::IntRect(2,98,25,20);
     const sf::IntRect jumpAnimationRect = sf::IntRect(5,73,20,20);
     const sf::IntRect fallAnimationRect = sf::IntRect(180,73,20,20);
-    const sf::IntRect flyAnimationRect = sf::IntRect();
+    //kirby起飞动画（按下x触发）
+    const std::vector<sf::IntRect> flyPrepareAnimationRect = {
+        sf::IntRect(4,205,25,26),sf::IntRect(33,205,25,26),
+        sf::IntRect(62,205,25,26),sf::IntRect(91,205,27,26),
+        sf::IntRect(121,205,27,26),sf::IntRect(152,205,25,26)
+    };
+    const std::vector<sf::IntRect> flyingAnimationRect = {
+        sf::IntRect(62,205,25,26),sf::IntRect(91,205,27,26),
+        sf::IntRect(121,205,27,26),sf::IntRect(152,205,25,26)
+    };
     //kirby攻击动画
     const std::vector<sf::IntRect> attackAnimationRect = {
         sf::IntRect(5,1898,21,19),sf::IntRect(31,1896,23,21),

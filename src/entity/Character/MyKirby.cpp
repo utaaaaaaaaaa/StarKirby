@@ -30,7 +30,7 @@ void MyKirby::fall(float deltatime, Background& bg) {
     //必须先检查是否在地面上，不然直接掉出屏幕！！
     checkGroundCollision(bg);
     checkBarrierCollision(bg.getBarrier());
-    if(!m_isGround) {
+    if(!m_isGround || (m_isGround && m_speed.y < 0)) {
         m_speed.y += m_gravity * deltatime; 
         m_kirby.move(0,m_speed.y);
     } 
@@ -38,6 +38,44 @@ void MyKirby::fall(float deltatime, Background& bg) {
 
 void MyKirby::jump() {
 
+}
+
+void MyKirby::startFly(float deltatime, Background& bg){
+    if(!m_startFly){
+        //必须先检查是否在地面上，不然直接掉出屏幕！！
+        checkGroundCollision(bg);
+        checkBarrierCollision(bg.getBarrier());
+        m_startFly = true;
+        m_gravity = 0.15f;
+        m_speed.y = -0.12f;
+        m_startFlyClock.restart();
+    }
+}
+
+void MyKirby::enterFlyModel(){
+    m_startFly = false;
+    m_isFlying = true;
+    m_speed.y = 0;
+    std::cout<<"进入飞行模式!-------"<<std::endl;
+} 
+
+void MyKirby::fly(float deltatime, Background& bg){
+    if(m_isFlying){
+        //地面和障碍物碰撞检测
+        checkGroundCollision(bg);
+        checkBarrierCollision(bg.getBarrier());
+        //卡比水平方向移动
+        m_kirby.move(m_speed.x,0);
+        //根据速度方向改变卡比朝向
+        m_faceRight = m_speed.x >=0 ? true : false;
+    }
+}
+
+void MyKirby::endFly(){
+    m_isFlying = false;
+    m_gravity = 0.8f;
+    m_speed.y = 0;
+    std::cout<<"结束飞行模式!-------"<<std::endl;
 }
 
 void MyKirby::attack(){
@@ -69,7 +107,7 @@ void MyKirby::checkGroundCollision(Background& bg) {
         if(kirbyBounds.intersects(ground)){
             //卡比竖直速度为0，坐标设置在地面上
             m_isGround = true;
-            m_speed.y = 0.0;
+            m_speed.y = m_speed.y > 0 ? 0 : m_speed.y;
             m_kirby.setPosition(m_kirby.getPosition().x, ground.top - kirbyBounds.height - 1);
             break;
         }
@@ -84,7 +122,7 @@ void MyKirby::checkBarrierCollision(Barrier& barrier){
         case 0:
             break;
         case 1: //站在障碍物上
-            m_speed.y = 0;
+            m_speed.y = m_speed.y > 0 ? 0 : m_speed.y;
             m_isGround = true;
             //将角色精确放置在障碍物顶部
             m_kirby.setPosition(m_kirby.getPosition().x, 

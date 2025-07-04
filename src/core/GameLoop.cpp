@@ -75,6 +75,11 @@ void GameLoop::initAnimation(){
     //死亡动画
     deathAnimation.setFrames(deathAnimationRect);
     deathAnimation.play(0.1f,false);
+    //飞行动画
+    flyingAnimation.setFrames(flyingAnimationRect);
+    //准备飞行（起飞）动画
+    flyPreAnimation.setFrames(flyPrepareAnimationRect);
+    flyPreAnimation.play(0.05f,false);
     // 行走动画
     for (int i = 0; i < 10; i++) {
         walkAnimation.addFrame(sf::IntRect(
@@ -138,6 +143,21 @@ void GameLoop::updateAnimation(float deltaTime){
             currentState = AnimationState::Falling;
         }
         break;
+    case AnimationState::FlyPre:
+        m_player.setTextureRect(flyPreAnimation.update(deltaTime));
+        m_kirby.setStartFlyCD(m_kirby.getStartFlyClock().getElapsedTime().asSeconds()>=1 ? 0 : m_kirby.getStartFlyClock().getElapsedTime().asSeconds());
+        if(m_kirby.getStartFlyClock().getElapsedTime().asSeconds()>m_kirby.getStartFlyDuration()){
+            //起飞完成进入飞行模式
+            m_kirby.enterFlyModel();
+            currentState = AnimationState::Flying;
+        }
+        break;
+    case AnimationState::Flying:
+        m_player.setTextureRect(flyingAnimation.update(deltaTime));
+        if(m_kirby.getIsGround()){
+            m_kirby.endFly();
+            currentState = AnimationState::Standing;
+        }    
     default:
         break;
     }
@@ -166,7 +186,7 @@ void GameLoop::update() {
                 currentState = AnimationState::Walking;
             }
     }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && m_kirby.getIsGround() && m_kirby.isAlive()) {
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::X)) && m_kirby.getIsGround() && m_kirby.isAlive()) {
         if (m_player.getPosition().y > 0)
             // m_player.move({0, -m_speed.y});
             m_kirby.setSpeed({0, -m_speed.y});
@@ -180,12 +200,20 @@ void GameLoop::update() {
         currentState = AnimationState::Attacking;
         attackAnimation.play(0.05f,false);
     }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && m_kirby.isAlive() ) {
+        // m_kirby.update(deltaTime, m_background);
+        m_kirby.startFly(deltaTime,m_background);
+        currentState = AnimationState::FlyPre;
+        flyPreAnimation.play(0.05f,false);
+        // std::cout<<"speedY: "<<m_kirby.getSpeed().y<<std::endl;
+    }
     //检测是否没有水平输入、不是原地起跳、没有在攻击
     bool noHorizontalInput = !sf::Keyboard::isKeyPressed(sf::Keyboard::A) && 
                          !sf::Keyboard::isKeyPressed(sf::Keyboard::D) &&
-                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Space) &&
-                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Z);
-    if (noHorizontalInput && m_kirby.getIsGround() && !m_kirby.getIsAttacking() && m_kirby.isAlive()) {
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::X) &&
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::Z)&&
+                         !sf::Keyboard::isKeyPressed(sf::Keyboard::W);
+    if (noHorizontalInput && m_kirby.getIsGround() && !m_kirby.getIsAttacking() && m_kirby.isAlive() && !m_kirby.getStartFly() && !m_kirby.isFlying()) {
         currentState = AnimationState::Standing;
     }
     if (!m_kirby.isAlive() && !m_kirby.isDying()){

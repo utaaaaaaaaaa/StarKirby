@@ -16,6 +16,10 @@ public:
     void walk(Background& bg);
     void fall(float deltatime, Background& bg);
     void jump();
+    void startFly(float deltatime, Background& bg);
+    void enterFlyModel();
+    void fly(float deltatime, Background& bg);
+    void endFly();
     void attack();
     void reborn();
     void checkGroundCollision(Background& bg);
@@ -29,12 +33,20 @@ public:
     bool getIsAttacking(){return m_isAttacking;};
     bool getCanDoDamage(){return m_canDoDamge;};
     sf::Clock getClock(){return m_deathClock;}
+    sf::Clock getStartFlyClock(){return m_startFlyClock;}
+    float getStartFlyCD(){return m_startFlyCD;}
+    float getStartFlyDuration(){return m_startFlyDuration;}
     float getDeathDuration(){return m_deathDuration;}
+    bool getStartFly(){return m_startFly;}
+    bool isFlying(){return m_isFlying;}
     bool isAlive(){return m_health>0;};
     bool isDying(){return m_isDying;}
     void setSprite(sf::Sprite& player);
     void setSpeed(sf::Vector2f speed);
     void setIsDying(bool isDying){m_isDying = isDying;}
+    void setIsFlying(bool isFlying){m_isFlying = isFlying;}
+    void setStartFly(bool startFly){m_startFly = startFly;}
+    void setStartFlyCD(float cd){m_startFlyCD = cd;}
 
     void die(){
         // m_isDying = true;
@@ -52,11 +64,18 @@ private:
     float m_deathDuration = 0.7f; //死亡动画持续时间
 
     bool m_faceRight = true;
+    //起飞相关参数
+    bool m_isFlying = false;
+    bool m_startFly = false;
+    sf::Clock m_startFlyClock;
+    float m_startFlyCD = 0.0f;
+    float m_startFlyDuration = 0.3f;
+
     bool m_isGround = false;
     bool m_isNoHarm = false;
     sf::Clock m_invincibilityClock; //无敌时间计时器
     float m_invincibilityDuration = 2.0f; //无敌状态持续时间
-    const float m_gravity = 0.8f;
+    float m_gravity = 0.8f;
     //攻击相关属性
     bool m_isAttacking = false;
     bool m_canDoDamge = false;
