@@ -48,6 +48,12 @@ void MyKirby::attack(){
     }
 }
 
+void MyKirby::reborn(){
+    this->m_kirby.setPosition(30,90);
+    this->m_health = 5;
+    m_isDying = false;
+}
+
 void MyKirby::checkGroundCollision(Background& bg) {
     m_isGround = false;
     // m_speed.y = 0.5;
@@ -112,6 +118,11 @@ void MyKirby::checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies){
             if(!m_isNoHarm){
                 m_health -= enemy->getAttack();
                 std::cout<<"Kirby-HP: "<<m_health<<std::endl;
+                //卡比死亡逻辑
+                if(m_health <=0){
+                    std::cout<<"=====Kirby Die!!! GAME OVER!!======"<<std::endl;
+                    die();
+                }
                 //设置为无敌并重置计时器
                 m_isNoHarm = true;
                 m_invincibilityClock.restart();

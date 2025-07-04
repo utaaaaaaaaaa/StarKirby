@@ -72,6 +72,9 @@ void GameLoop::initEnemy(){
 void GameLoop::initAnimation(){
     // 站立动画
     standAnimation.addFrame(standAnimationRect);
+    //死亡动画
+    deathAnimation.setFrames(deathAnimationRect);
+    deathAnimation.play(0.1f,false);
     // 行走动画
     for (int i = 0; i < 10; i++) {
         walkAnimation.addFrame(sf::IntRect(
@@ -126,6 +129,15 @@ void GameLoop::updateAnimation(float deltaTime){
     case AnimationState::Attacking:
         m_player.setTextureRect(attackAnimation.update(deltaTime));
         break;
+    case AnimationState::Death:
+        m_player.setTextureRect(deathAnimation.update(deltaTime));
+        //如果动画播放完...
+        if(m_kirby.getClock().getElapsedTime().asSeconds()>m_kirby.getDeathDuration()){
+            //重新复活或者游戏结束
+            m_kirby.reborn();
+            currentState = AnimationState::Falling;
+        }
+        break;
     default:
         break;
     }
@@ -136,7 +148,7 @@ void GameLoop::update() {
     float deltaTime = clock.restart().asSeconds();
     // elapsedTime += deltaTime;
     //处理键盘输入
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && m_kirby.isAlive()) {
         if (m_player.getPosition().x > 0)
             // m_player.move(-m_speed, 0);
             m_kirby.setSpeed({-m_speed.x,m_kirby.getSpeed().y});
@@ -145,7 +157,7 @@ void GameLoop::update() {
                 currentState = AnimationState::Walking;
             }
     }
-    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::D) && m_kirby.isAlive()) {
         if (m_player.getPosition().x < m_originalSize.x - m_player.getGlobalBounds().width)
             // m_player.move({m_speed.x, 0});
             m_kirby.setSpeed({m_speed.x,m_kirby.getSpeed().y});
@@ -154,7 +166,7 @@ void GameLoop::update() {
                 currentState = AnimationState::Walking;
             }
     }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && m_kirby.getIsGround()) {
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) && m_kirby.getIsGround() && m_kirby.isAlive()) {
         if (m_player.getPosition().y > 0)
             // m_player.move({0, -m_speed.y});
             m_kirby.setSpeed({0, -m_speed.y});
@@ -162,7 +174,7 @@ void GameLoop::update() {
             currentState = AnimationState::Jumping;
             jumpAnimation.play(0.1f, false); //重置跳跃动画
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && !m_kirby.getIsAttacking()) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && !m_kirby.getIsAttacking() && m_kirby.isAlive()) {
         // m_kirby.update(deltaTime, m_background);
         m_kirby.attack();
         currentState = AnimationState::Attacking;
@@ -173,8 +185,13 @@ void GameLoop::update() {
                          !sf::Keyboard::isKeyPressed(sf::Keyboard::D) &&
                          !sf::Keyboard::isKeyPressed(sf::Keyboard::Space) &&
                          !sf::Keyboard::isKeyPressed(sf::Keyboard::Z);
-    if (noHorizontalInput && m_kirby.getIsGround() && !m_kirby.getIsAttacking()) {
+    if (noHorizontalInput && m_kirby.getIsGround() && !m_kirby.getIsAttacking() && m_kirby.isAlive()) {
         currentState = AnimationState::Standing;
+    }
+    if (!m_kirby.isAlive() && !m_kirby.isDying()){
+        currentState = AnimationState::Death;
+        deathAnimation.play(0.1f,false);
+        m_kirby.setIsDying(true);
     }
     //处理帧动画
     updateAnimation(deltaTime);

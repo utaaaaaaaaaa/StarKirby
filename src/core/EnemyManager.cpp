@@ -53,14 +53,24 @@ void EnemyManager::updateAnimation(float deltaTime,std::shared_ptr<Enemy> enemy)
     }else {
         //切换死亡纹理
         if(enemy->shouldChangeTexture()){
+            //设置死亡动画起始位置
+            enemy->setDeathCenter(sf::Vector2f(enemy->getSprite().getPosition()));
+            //设置纹理
             enemy->getSprite().setTexture(m_deathTexture);
             enemy->setShouldChangeTexture(false);
         }
         enemy->setAttack(0);
-        //播放死亡动画
-        enemy->getSprite().setTextureRect(enemyDeadAnimation.update(deltaTime));
+        //播放死亡动画（根据中心点偏移）
+        sf::IntRect& currentRect = enemyDeadAnimation.update(deltaTime);
+        sf::FloatRect bounds = enemy->getBeforeDeathBounds();
+        sf::Vector2f pos = enemy->getDeathCenter();
+        float deltaX = (currentRect.width - bounds.width) / 2.0;
+        float deltaY = (currentRect.height - bounds.height) / 2.0; 
+        enemy->getSprite().setTextureRect(currentRect);
+        enemy->getSprite().setPosition(pos.x - deltaX, pos.y - deltaY);
+        //如果动画播放完成，标记为可以销毁敌人
         if (enemy->getClock().getElapsedTime().asSeconds() > enemy->getDeathDuration()) {
-            enemy->setShouldDestroy(true); //动画结束后，标记为可销毁
+            enemy->setShouldDestroy(true); 
         }
     }
 }

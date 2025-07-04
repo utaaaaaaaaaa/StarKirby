@@ -17,6 +17,7 @@ public:
     void fall(float deltatime, Background& bg);
     void jump();
     void attack();
+    void reborn();
     void checkGroundCollision(Background& bg);
     void checkBarrierCollision(Barrier& barrier);
     void checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies);
@@ -27,12 +28,29 @@ public:
     bool getIsGround(){return m_isGround;};
     bool getIsAttacking(){return m_isAttacking;};
     bool getCanDoDamage(){return m_canDoDamge;};
+    sf::Clock getClock(){return m_deathClock;}
+    float getDeathDuration(){return m_deathDuration;}
+    bool isAlive(){return m_health>0;};
+    bool isDying(){return m_isDying;}
     void setSprite(sf::Sprite& player);
     void setSpeed(sf::Vector2f speed);
+    void setIsDying(bool isDying){m_isDying = isDying;}
+
+    void die(){
+        // m_isDying = true;
+        // std::cout<<"m_isDying: "<<m_isDying<<std::endl;
+        m_deathClock.restart();
+    }
 private:
     sf::Sprite& m_kirby;
     sf::Vector2f m_speed = {0.25,0.15};
     int m_health;
+    //死亡相关参数
+    bool m_shouldDestroy = false; //是否要被销毁
+    bool m_isDying = false;    //是否正在播放死亡动画
+    sf::Clock m_deathClock;    //死亡动画计时器
+    float m_deathDuration = 0.7f; //死亡动画持续时间
+
     bool m_faceRight = true;
     bool m_isGround = false;
     bool m_isNoHarm = false;

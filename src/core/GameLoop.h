@@ -48,6 +48,7 @@ private:
 
     //动画帧
     Animation standAnimation;
+    Animation deathAnimation;
     Animation walkAnimation;
     Animation jumpAnimation;
     Animation fallAnimation;

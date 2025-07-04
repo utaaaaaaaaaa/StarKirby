@@ -16,6 +16,13 @@ namespace AnimationFrame {
         sf::IntRect(59,1896,22,21),sf::IntRect(86,1899,23,18),
         sf::IntRect(114,1902,24,15),sf::IntRect(143,1900,20,17)
     };
+    //kirby死亡动画
+    const std::vector<sf::IntRect> deathAnimationRect = {
+        sf::IntRect(4,2520,21,17),sf::IntRect(29,2520,21,17),
+        sf::IntRect(54,2517,21,20),sf::IntRect(79,2520,21,17),
+        sf::IntRect(104,2520,20,17),sf::IntRect(128,2517,16,20),
+        sf::IntRect(1,1,1,1)
+    };
     //sparkEnemy动画参数
     const std::vector<sf::IntRect> sparkEnemyAnimationRects = {
         sf::IntRect(0,3,21,18),sf::IntRect(25,3,20,18),

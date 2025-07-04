@@ -9,7 +9,8 @@ enum class AnimationState {
     Walking,
     Jumping,
     Attacking,
-    Falling
+    Falling,
+    Death
 };
 
 class Animation {

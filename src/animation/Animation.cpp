@@ -1,7 +1,6 @@
 #include "Animation.h"
 #include <algorithm>
 
-
 void Animation::addFrame(sf::IntRect frame){
     frames.push_back(frame);
 }

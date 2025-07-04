@@ -18,6 +18,7 @@ public:
         m_health -= amount;
         std::cout<<"Enemy-HP: "<<m_health<<std::endl;
         if (m_health<=0){
+            this->m_beforeDeathBounds = m_sprite.getGlobalBounds();
             die();
             std::cout<<"die--------"<<std::endl;
         }       
@@ -32,12 +33,16 @@ public:
     void setHealth(int health){m_health = health;}
     void setAttack(int attack){m_attack = attack;}
     void setShouldDestroy(bool shouldDestroy){m_shouldDestroy = shouldDestroy;}
-    void setShouldChangeTexture(bool shouldChange){m_shouldChangeTexture = shouldChange;}
+    void setShouldChangeTexture(bool shouldChange)
+    {m_shouldChangeTexture = shouldChange;}
+    void setDeathCenter(sf::Vector2f center){m_deathCenter = center;}
     sf::Vector2f getSpeed(){return m_speed;}
     sf::Sprite& getSprite() { return m_sprite; }
     int getAttack(){return m_attack;}
     sf::Clock getClock(){return m_deathClock;}
     float getDeathDuration(){return m_deathDuration;}
+    sf::Vector2f getDeathCenter(){return m_deathCenter;}
+    sf::FloatRect getBeforeDeathBounds(){return m_beforeDeathBounds;}
     bool isAlive() { return m_health > 0; }
     bool isDying(){return m_isDying;}
     bool shouldDestroy(){return m_shouldDestroy;}
@@ -47,12 +52,13 @@ protected:
     void die(){
         m_isDying = true;
         m_shouldChangeTexture = true;
-        std::cout<<"m_isDying: "<<m_isDying<<std::endl;
         m_deathClock.restart();
     }
 
     sf::Sprite& m_sprite;
     sf::Vector2f m_speed;
+    sf::Vector2f m_deathCenter;
+    sf::FloatRect m_beforeDeathBounds;
     int m_health;
     bool m_shouldDestroy = false; //是否要被销毁
     bool m_isDying = false;    //是否正在播放死亡动画
