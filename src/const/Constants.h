@@ -188,6 +188,12 @@ namespace Obstacle {
     };
 }
 
+struct Apple {
+    sf::Sprite sprite;
+    bool collected = false;
+};
+
+const int APPLE_SCORE_VALUE = 20; //每个苹果分值
 // 游戏机制相关常量
 // namespace GameMechanics {
 //     const qreal maxFlyHeight = 100;  // 最大飞行高度

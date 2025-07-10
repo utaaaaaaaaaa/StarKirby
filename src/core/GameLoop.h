@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <memory>
+#include <random>
 #include <stack>
 #include <scene/Background.h>
 #include <entity/Character/MyKirby.h>
@@ -47,6 +48,8 @@ private:
     void loadTexture();
     //初始化游戏显示数据
     void initScoreHealth();
+    //加载苹果
+    void spawnApples(int count);
     //更新关卡
     void loadNextLevel();
     //重置
@@ -174,6 +177,16 @@ private:
         }
         return m_stateStack.empty() ? STATE_MENU : m_stateStack.top();
     }
+
+    //得分苹果
+    std::vector<Apple> m_apples;
+    
+    //随机数生成器
+    std::random_device m_rd;
+    std::mt19937 m_gen{m_rd()};
+    
+    //苹果纹理
+    sf::Texture m_appleTexture;
     
 };
 

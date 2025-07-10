@@ -31,6 +31,7 @@ public:
     void loadTexture();
     void checkGroundCollision(Background& bg);
     void checkBarrierCollision(Barrier& barrier);
+    void checkAppleCollision(std::vector<Apple>& m_apples);
     void checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies);
     void checkAttackHit(std::vector<std::shared_ptr<Enemy>>& enemies);
     void checkDevourHit(std::vector<std::shared_ptr<Enemy>>& enemies);
@@ -124,6 +125,7 @@ private:
     bool m_isDefault = true;
     bool m_isChangable = false;
     int m_changeType;
+
 };
 
 #endif

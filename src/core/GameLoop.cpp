@@ -19,6 +19,8 @@ GameLoop::GameLoop(sf::RenderWindow& window, sf::Sprite& player, EnemyManager& e
     m_bestRecord = ScoreManager::loadHighScore();
     //初始化状态栈
     m_stateStack.push(STATE_MENU);
+    //初始化苹果
+    spawnApples(4);
     //初始化分数、生命值
     initScoreHealth();
     //初始化动画帧
@@ -30,6 +32,9 @@ void GameLoop::loadTexture(){
     m_background.loadTextures("assets/back_top.png","assets/back_bottom.png");
     if (!m_endingTexture.loadFromFile("assets/winScreen.png")) {
         throw std::runtime_error("无法加载通关图片");
+    }
+    if (!m_appleTexture.loadFromFile("assets/apple.png")) {
+        throw std::runtime_error("无法加载苹果图片");
     }
     if (!m_gameOverTexture.loadFromFile("assets/loseScreen.png")) {
         throw std::runtime_error("无法加载失败图片");
@@ -75,6 +80,18 @@ void GameLoop::loadTexture(){
         windowSize.x / m_gameOverSprite.getLocalBounds().width,
         windowSize.y / m_gameOverSprite.getLocalBounds().height
     );
+}
+
+void GameLoop::spawnApples(int count) {
+    std::uniform_int_distribution<> xDist(50, m_originalSize.x * 3 - 50);
+    std::uniform_int_distribution<> yDist(40, 150);
+    
+    for (int i = 0; i < count; ++i) {
+        Apple apple;
+        apple.sprite.setTexture(m_appleTexture);
+        apple.sprite.setPosition(xDist(m_gen), yDist(m_gen));
+        m_apples.push_back(apple);
+    }
 }
 
 void GameLoop::run() {
@@ -319,7 +336,8 @@ void GameLoop::loadNextLevel(){
     m_isLoadingNextLevel = true;
 
     //重置卡比位置到左侧
-    m_player.setPosition( (m_window.getSize().x + 25)* m_currentScene, m_player.getPosition().y - 100);
+    m_player.setPosition( (m_window.getSize().x + 25)* m_currentScene, 80);
+    currentState = AnimationState::Falling;
     
     // 根据关卡编号加载不同地图
     switch (m_currentLevel) {
@@ -334,6 +352,7 @@ void GameLoop::loadNextLevel(){
             m_scoreText.setPosition((m_window.getSize().x + 25)* m_currentScene + m_window.getSize().x - 120, 10); //右上角
             m_healthText.setPosition((m_window.getSize().x + 25)* m_currentScene+10,10);
             m_levelText.setPosition((m_window.getSize().x + 25)* m_currentScene+10,28);
+            m_helpMenu.setPosition((m_window.getSize().x + 25)* m_currentScene,0);
             m_currentScene++;
             break;
         case 3:
@@ -348,17 +367,25 @@ void GameLoop::resetGameData(){
     //重置卡比状态
     m_kirby.reset();
     m_currentAnimation = &m_normalAnimation;
+    currentState = AnimationState::Falling;
+    m_player.setPosition(30, 90); //初始位置
 
     //重置关卡数据
     m_currentLevel = 1;
     m_currentScene = 0;
     m_isGameCompleted = false;
+    m_levelWidth = 510.f;  //关卡宽度
     m_win = false;
     
     //重置敌人
     m_enemyManager.clear();
+
+    //重新生成苹果
+    m_apples.clear();
+    spawnApples(4);
     
     //重置视图
+    m_helpMenu.setPosition(0,0);
     m_gameView.setCenter(m_originalSize.x/2, m_originalSize.y/2);
     m_window.setView(m_gameView);
     
@@ -367,6 +394,7 @@ void GameLoop::resetGameData(){
 }
 
 void GameLoop::end(){
+    std::cout<<"end-------------"<<m_isGameCompleted<<" "<<m_currentLevel <<std::endl;
     m_gameOverSprite.setPosition((m_window.getSize().x + 25)* (m_currentScene-1),0);
     m_endingSprite.setPosition((m_window.getSize().x + 25)* (m_currentScene-1),0);
     if(m_kirby.isAlive()){
@@ -490,6 +518,7 @@ void GameLoop::update() {
                 m_scoreText.setPosition((m_window.getSize().x + 25)* m_currentScene + m_window.getSize().x - 120, 10); //右上角
                 m_healthText.setPosition((m_window.getSize().x + 25)* m_currentScene+10,10);
                 m_levelText.setPosition((m_window.getSize().x + 25)* m_currentScene+10,28);
+                m_helpMenu.setPosition((m_window.getSize().x + 25)* m_currentScene,0);
                 m_currentScene++;
             }
             //更新视图中心（跟随玩家）
@@ -586,6 +615,7 @@ void GameLoop::update() {
             m_kirby.checkAttackHit(m_enemies);
             m_kirby.checkDevourHit(m_enemies);
             m_kirby.checkEnemyCollision(m_enemies);
+            m_kirby.checkAppleCollision(m_apples);
             m_kirby.updateInvincibility();
             //敌人运动
             m_enemyManager.updateAll(deltaTime,m_background);
@@ -666,13 +696,19 @@ void GameLoop::renderGameWorld(){
     m_levelText.setString("Level: " + std::to_string(m_currentLevel));
     m_window.draw(m_levelText);
     // 关卡切换时的渐隐效果
-    if (m_isLoadingNextLevel) {
-        m_fadeOverlay.setFillColor(sf::Color(0, 0, 0, m_fadeAlpha));
-        m_window.draw(m_fadeOverlay);
-        m_fadeAlpha += 1; // 调整速度
-        if (m_fadeAlpha >= 255) {
-            m_fadeAlpha = 0;
-            m_isLoadingNextLevel = false;
+    // if (m_isLoadingNextLevel) {
+    //     m_fadeOverlay.setFillColor(sf::Color(0, 0, 0, m_fadeAlpha));
+    //     m_window.draw(m_fadeOverlay);
+    //     m_fadeAlpha += 1; // 调整速度
+    //     if (m_fadeAlpha >= 255) {
+    //         m_fadeAlpha = 0;
+    //         m_isLoadingNextLevel = false;
+    //     }
+    // }
+    //绘制苹果
+    for (const auto& apple : m_apples) {
+        if (!apple.collected) {
+            m_window.draw(apple.sprite);
         }
     }
 }

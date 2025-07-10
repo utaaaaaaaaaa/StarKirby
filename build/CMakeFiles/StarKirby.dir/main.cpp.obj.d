@@ -260,6 +260,30 @@ CMakeFiles/StarKirby.dir/main.cpp.obj: D:\_Code\c++\StarKirby\main.cpp \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/random \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cmath \
+ D:/c++/lib/mingw64-13.1.0/x86_64-w64-mingw32/include/math.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/specfun.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/limits \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/gamma.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/special_function_util.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/bessel_function.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/beta_function.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/ell_integral.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/exp_integral.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/hypergeometric.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/legendre_function.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/modified_bessel_func.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/poly_hermite.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/poly_laguerre.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/tr1/riemann_zeta.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/cstdint \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/random.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/x86_64-w64-mingw32/bits/opt_random.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/random.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/numeric \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_numeric.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_numeric_defs.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/stack \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/deque \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_deque.h \

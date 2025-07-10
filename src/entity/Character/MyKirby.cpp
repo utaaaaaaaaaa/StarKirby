@@ -272,6 +272,23 @@ void MyKirby::checkEnemyCollision(std::vector<std::shared_ptr<Enemy>>& enemies){
     }
 }
 
+void MyKirby::checkAppleCollision(std::vector<Apple>& m_apples){
+    //苹果碰撞检测
+    for (auto& apple : m_apples) {
+        if (!apple.collected && m_kirby.getGlobalBounds().intersects(apple.sprite.getGlobalBounds())) 
+        {
+            apple.collected = true;
+            addScore(APPLE_SCORE_VALUE);
+        }
+    }
+    //移除已收集的苹果
+    m_apples.erase(
+        std::remove_if(m_apples.begin(), m_apples.end(), 
+            [](const Apple& a) { return a.collected; }),
+        m_apples.end()
+    );
+}
+
 void MyKirby::checkAttackHit(std::vector<std::shared_ptr<Enemy>>& enemies){
     sf::FloatRect attackArea = m_kirby.getGlobalBounds();
     //计算攻击区域

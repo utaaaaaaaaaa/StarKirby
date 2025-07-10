@@ -22,7 +22,6 @@ void EnemyManager::initEnemy(){
     spawnEnemy("fly",780, 15 + 56 - 25);
     spawnEnemy("fly",1342, 35 + 56 - 25);
     spawnEnemy("plant",1394, 133 + 56 - 25);
-    spawnEnemy("plant",832, 85 + 56 - 25);
 }
 
 void EnemyManager::spawnEnemy(const std::string& type, float x, float y) {
@@ -56,7 +55,7 @@ void EnemyManager::loadTextures() {
         throw std::runtime_error("没有找到plantEnemy素材，敌人创建失败");
     }
     plantEnemyAnimation.setFrames(plantEnemyAnimationRects);
-    plantEnemyAnimation.play(0.2f);
+    plantEnemyAnimation.play(0.16f);
     flyEnemyAnimation.setFrames(flyEnemyAnimationRects);
     flyEnemyAnimation.play(0.12f);
     sparkEnemyAnimation.setFrames(sparkEnemyAnimationRects);
