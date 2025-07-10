@@ -15,9 +15,7 @@ public:
 
 private:
     //存储障碍物矩形
-    std::vector<sf::FloatRect> barrierRects = {
-        barrier_1
-    };
+    std::vector<sf::FloatRect> barrierRects = barriersRects;
     //正在被碰撞的障碍物
     sf::FloatRect theOneBarrier;
 };

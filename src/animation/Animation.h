@@ -9,10 +9,12 @@ enum class AnimationState {
     Walking,
     Jumping,
     Attacking,
+    AttackFly,
     Falling,
     Death,
     Flying,
     FlyPre,
+    Devour,
 };
 
 class Animation {

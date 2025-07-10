@@ -39,3 +39,29 @@ void Enemy::checkCollisions(Background& bg){
             break;
     }
 }
+
+void Enemy::startBeingDevoured(){
+    std::cout<<"==== Enemy start being devoured ===="<<std::endl;
+    m_isBeingDevoured = true;
+    m_devourClock.restart();
+    m_speed = {m_speed.x/4,m_speed.y/4}; //被吞噬时速度变为原速度1/4
+}
+
+void Enemy::resetDevour(){
+    std::cout<<"==== Enemy reset devour ===="<<std::endl;
+    m_isBeingDevoured = false;
+    m_speed = {m_speed.x*4,m_speed.y*4}; 
+}
+
+void Enemy::takeDevour(){
+    std::cout<<"Enemy is being devoured "<<std::endl;
+    
+}
+
+void Enemy::endBeingDevoured(){
+    std::cout<<"==== Enemy end being devoured ===="<<std::endl;
+    m_isBeingDevoured = false;
+    m_health = 0;
+    die(); //暂时用die函数替代
+
+}

@@ -30,6 +30,15 @@ void Background::update() {
     // 如果背景需要滚动，可以在这里更新精灵的位置
 }
 
+void Background::setBottomPos(int x){
+    sf::Vector2f pos = m_spriteBottom.getPosition();
+    m_spriteBottom.setPosition(x,pos.y);
+}
+
+void Background::setBottomRect(sf::IntRect rect){
+    m_spriteBottom.setTextureRect(rect);
+}
+
 void Background::splitMap(sf::Sprite& tile) {
     //切割图片
     tile.setTextureRect(sf::IntRect(ground_split_left, ground_split_top,ground_split_width,ground_split_height));

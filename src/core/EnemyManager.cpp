@@ -3,31 +3,68 @@
 
 using namespace AnimationFrame;
 
-EnemyManager::EnemyManager()
-    :m_sparkEnemy(m_sprite) {
-    //加载精灵纹理
-    if (!m_texture.loadFromFile("assets/sparkEnemy.png")) {
-        throw std::runtime_error("没有找到sparkEnemy素材，敌人创建失败");
-    }
+EnemyManager::EnemyManager(){
+    loadTextures();
     //加载死亡动画纹理
     if (!m_deathTexture.loadFromFile("assets/deadAnimation.png")) {
         throw std::runtime_error("没有找到deadAnimation素材，敌人创建失败");
     }
-    m_sprite.setTexture(m_texture);
-    m_sprite.setTextureRect(sparkEnemyAnimationRects[0]);
-    m_sprite.setPosition(250, 150 + 56 - 25); 
+    initEnemy();
     //设置动画参数
-    sparkEnemyAnimation.setFrames(sparkEnemyAnimationRects);
-    sparkEnemyAnimation.play(0.12f);
     enemyDeadAnimation.setFrames(enemyDeadAnimationRects);
     enemyDeadAnimation.play(0.1f,false);
-    //添加所有敌人到统一容器
-    addEnemy(m_sparkEnemy);
 }
 
+void EnemyManager::initEnemy(){
+    spawnEnemy("spark",250, 150 + 56 - 25);
+    spawnEnemy("spark",620, 150 + 56 - 25);
+    spawnEnemy("spark",1130, 130 + 56 - 25);
+    spawnEnemy("fly",780, 15 + 56 - 25);
+    spawnEnemy("fly",1342, 35 + 56 - 25);
+    spawnEnemy("plant",1394, 133 + 56 - 25);
+    spawnEnemy("plant",832, 85 + 56 - 25);
+}
+
+void EnemyManager::spawnEnemy(const std::string& type, float x, float y) {
+    auto sprite = std::make_shared<sf::Sprite>();
+    sprite->setTexture(m_textures[type]);
+    sprite->setPosition(x, y);
+
+    if (type == "spark") {
+        auto enemy = std::make_shared<SparkEnemy>(sprite);
+        m_enemies.push_back(enemy);
+    } 
+    else if(type == "fly") {
+        auto enemy = std::make_shared<FlyEnemy>(sprite);
+        m_enemies.push_back(enemy);
+    }
+    else if(type == "plant"){
+        auto enemy = std::make_shared<PlantEnemy>(sprite);
+        m_enemies.push_back(enemy);
+    }
+    //...
+}
+
+void EnemyManager::loadTextures() {
+    if (!m_textures["spark"].loadFromFile("assets/sparkEnemy.png")) {
+        throw std::runtime_error("没有找到sparkEnemy素材，敌人创建失败");
+    }
+    if (!m_textures["fly"].loadFromFile("assets/flyingEnemy.png")) {
+        throw std::runtime_error("没有找到flyingEnemy素材，敌人创建失败");
+    }
+    if (!m_textures["plant"].loadFromFile("assets/plantEnemy.png")) {
+        throw std::runtime_error("没有找到plantEnemy素材，敌人创建失败");
+    }
+    plantEnemyAnimation.setFrames(plantEnemyAnimationRects);
+    plantEnemyAnimation.play(0.2f);
+    flyEnemyAnimation.setFrames(flyEnemyAnimationRects);
+    flyEnemyAnimation.play(0.12f);
+    sparkEnemyAnimation.setFrames(sparkEnemyAnimationRects);
+    sparkEnemyAnimation.play(0.12f);
+}
 
 void EnemyManager::addEnemy(SparkEnemy& enemy){
-    m_enemies.push_back(std::make_shared<SparkEnemy>(enemy));
+    
 };
 
 void EnemyManager::updateAll(float deltaTime, Background& bg){
@@ -49,7 +86,20 @@ void EnemyManager::updateAll(float deltaTime, Background& bg){
 
 void EnemyManager::updateAnimation(float deltaTime,std::shared_ptr<Enemy> enemy){
     if(enemy->isAlive()){
-        enemy->getSprite().setTextureRect(sparkEnemyAnimation.update(deltaTime));
+        switch (enemy->getMyType()) 
+        {
+        case 1: //sparkenemy
+            enemy->getSprite().setTextureRect(sparkEnemyAnimation.update(deltaTime));
+            break;
+        case 2: //flyenemy
+            enemy->getSprite().setTextureRect(flyEnemyAnimation.update(deltaTime));
+            break;
+        case 3: //plantenemy
+            enemy->getSprite().setTextureRect(plantEnemyAnimation.update(deltaTime));
+            break;
+        default:
+            break;
+        }
     }else {
         //切换死亡纹理
         if(enemy->shouldChangeTexture()){
@@ -76,8 +126,15 @@ void EnemyManager::updateAnimation(float deltaTime,std::shared_ptr<Enemy> enemy)
 }
 
 void EnemyManager::drawAll(sf::RenderWindow& window){
-    window.draw(m_sparkEnemy.getSprite());
+    for(auto& enemy : m_enemies){
+        window.draw(enemy->getSprite());
+    }
 };
 
 void EnemyManager::clear(){
+    //清空敌人容器
+    m_enemies.clear();
+
+    //重新生成初始敌人
+    initEnemy();
 };

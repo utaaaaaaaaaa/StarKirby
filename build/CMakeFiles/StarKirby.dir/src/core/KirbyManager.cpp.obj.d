@@ -262,6 +262,11 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/atomic_lockfree_defines.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/backward/auto_ptr.h \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/pstl/glue_memory_defs.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/stack \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/deque \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_deque.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/deque.tcc \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/stl_stack.h \
  D:/_Code/c++/StarKirby/src/scene/Background.h \
  D:/_Code/c++/StarKirby/src/scene/Barrier.h \
  D:/_Code/c++/StarKirby/src/const/Constants.h \
@@ -272,5 +277,12 @@ CMakeFiles/StarKirby.dir/src/core/KirbyManager.cpp.obj: \
  D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/istream.tcc \
  D:/_Code/c++/StarKirby/src/animation/Animation.h \
  D:/_Code/c++/StarKirby/src/core/EnemyManager.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/unordered_map \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/unordered_map.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/hashtable.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/hashtable_policy.h \
+ D:/c++/lib/mingw64-13.1.0/include/c++/13.1.0/bits/enable_special_members.h \
  D:/_Code/c++/StarKirby/src/entity/Enemy/SparkEnemy.h \
- D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h
+ D:/_Code/c++/StarKirby/src/entity/Enemy/Enemy.h \
+ D:/_Code/c++/StarKirby/src/entity/Enemy/FlyEnemy.h \
+ D:/_Code/c++/StarKirby/src/entity/Enemy/PlantEnemy.h

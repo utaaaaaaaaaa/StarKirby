@@ -23,6 +23,11 @@ public:
             std::cout<<"die--------"<<std::endl;
         }       
     };
+
+    void startBeingDevoured();
+    void takeDevour();
+    void endBeingDevoured();
+    void resetDevour();
     
     //复用卡比的检测方法，并且地面和障碍物一起检测
     //实战结果复用方法会出循环引用的问题，单独实现
@@ -36,17 +41,22 @@ public:
     void setShouldChangeTexture(bool shouldChange)
     {m_shouldChangeTexture = shouldChange;}
     void setDeathCenter(sf::Vector2f center){m_deathCenter = center;}
+    void setIsBeingDevoured(bool isBeingDevoured){m_isBeingDevoured = isBeingDevoured;}
     sf::Vector2f getSpeed(){return m_speed;}
     sf::Sprite& getSprite() { return m_sprite; }
     int getAttack(){return m_attack;}
+    int getMyType(){return m_type;}
     sf::Clock getClock(){return m_deathClock;}
+    sf::Clock getDevourClock(){return m_devourClock;}
     float getDeathDuration(){return m_deathDuration;}
+    float getDevourDuration(){return m_devourDuration;}
     sf::Vector2f getDeathCenter(){return m_deathCenter;}
     sf::FloatRect getBeforeDeathBounds(){return m_beforeDeathBounds;}
     bool isAlive() { return m_health > 0; }
     bool isDying(){return m_isDying;}
     bool shouldDestroy(){return m_shouldDestroy;}
     bool shouldChangeTexture(){return m_shouldChangeTexture;}
+    bool isBeingDevoured(){return m_isBeingDevoured;}
 
 protected:
     void die(){
@@ -69,6 +79,11 @@ protected:
     float m_gravity;
     bool m_isGround;
     bool m_isBlock = false;
+    bool m_isBeingDevoured = false;
+
+    sf::Clock m_devourClock; //被吞噬计时器
+    float m_devourDuration = 1.5f;
+    int m_type; //1:sparkEnemy, 2:...
 
 // private:
 //     MyKirby temp_enemy;

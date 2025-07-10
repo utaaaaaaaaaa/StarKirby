@@ -10,6 +10,10 @@ public:
     Background();
     void loadTextures(const std::string& texturePathTop, const std::string& texturePathBottom);
     void update();
+    void setBottomPos(int width);
+    void setBottomRect(sf::IntRect rect);
+    void resetPosition(){m_spriteBottom.setPosition(0, 0);};
+    // void setTopRects
     void draw(sf::RenderWindow& window);
     void splitMap(sf::Sprite& sprite);
     bool loadFromFile(const std::string& filePath); // 从文件加载地面数据
@@ -22,9 +26,7 @@ private:
     sf::Sprite m_spriteTop;
     sf::Sprite m_spriteBottom;
     Barrier m_barrier = Barrier();
-    std::vector<sf::FloatRect> groundRects = {
-        sf::FloatRect(Map::ground_left,Map::ground_top,Map::ground_width,Map::ground_height)
-    }; //存储地面矩形
+    std::vector<sf::FloatRect> groundRects = Map::groundsRects; //存储地面矩形
 };
 
 #endif 

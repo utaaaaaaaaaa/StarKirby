@@ -20,10 +20,13 @@ add_executable(StarKirby
     src/core/GameLoop.cpp
     src/core/KirbyManager.cpp
     src/core/EnemyManager.cpp
+    src/core/ScoreManager.cpp
     src/scene/Background.cpp
     src/scene/Barrier.cpp
     src/entity/Character/MyKirby.cpp
     src/entity/Enemy/SparkEnemy.cpp
+    src/entity/Enemy/FlyEnemy.cpp
+    src/entity/Enemy/PlantEnemy.cpp
     src/entity/Enemy/Enemy.cpp
     src/animation/Animation.cpp
 )
