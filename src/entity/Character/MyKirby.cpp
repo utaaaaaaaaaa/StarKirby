@@ -321,7 +321,20 @@ void MyKirby::checkAttackHit(std::vector<std::shared_ptr<Enemy>>& enemies){
                 else enemy->takeDamage(m_attackDamage);
                 m_canDoDamge = false;
                 if(!enemy->isAlive()){
-                    addScore(30); //敌人被消灭加30分
+                    switch (enemy->getMyType())
+                    {
+                    case 1 :
+                        addScore(30); //spark敌人被消灭加30分
+                        break;
+                    case 2 :
+                        addScore(40);
+                        break;
+                    case 3:
+                        addScore(25);
+                        break;
+                    default:
+                        break;
+                    }
                 }
             }
         }

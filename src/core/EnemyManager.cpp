@@ -120,6 +120,8 @@ void EnemyManager::updateAnimation(float deltaTime,std::shared_ptr<Enemy> enemy)
         //如果动画播放完成，标记为可以销毁敌人
         if (enemy->getClock().getElapsedTime().asSeconds() > enemy->getDeathDuration()) {
             enemy->setShouldDestroy(true); 
+            //重置死亡动画
+            enemyDeadAnimation.play(0.1f,false);
         }
     }
 }

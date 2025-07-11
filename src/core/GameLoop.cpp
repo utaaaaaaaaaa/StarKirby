@@ -84,7 +84,7 @@ void GameLoop::loadTexture(){
 
 void GameLoop::spawnApples(int count) {
     std::uniform_int_distribution<> xDist(50, m_originalSize.x * 3 - 50);
-    std::uniform_int_distribution<> yDist(40, 150);
+    std::uniform_int_distribution<> yDist(40, 120);
     
     for (int i = 0; i < count; ++i) {
         Apple apple;
@@ -337,9 +337,12 @@ void GameLoop::loadNextLevel(){
 
     //重置卡比位置到左侧
     m_player.setPosition( (m_window.getSize().x + 25)* m_currentScene, 80);
+    if(m_kirby.isFlying()){
+        m_kirby.endFly();
+    }
     currentState = AnimationState::Falling;
     
-    // 根据关卡编号加载不同地图
+    //根据关卡编号加载不同地图
     switch (m_currentLevel) {
         case 2:
             m_levelWidth = 1600.f;
@@ -417,6 +420,9 @@ void GameLoop::updateAnimation(float deltaTime){
         break;
     case AnimationState::Walking:
         m_player.setTextureRect(m_currentAnimation->walkAnimation.update(deltaTime));
+        if(m_kirby.isFlying()){
+            m_kirby.endFly();
+        }
         break;
     case AnimationState::Jumping:
         m_player.setTextureRect(m_currentAnimation->jumpAnimation.update(deltaTime));
@@ -433,7 +439,7 @@ void GameLoop::updateAnimation(float deltaTime){
     case AnimationState::Attacking:
         m_player.setTextureRect(m_currentAnimation->attackAnimation.update(deltaTime));
         //如果是闪电卡比普通攻击动画需要从中心点播放
-        if(m_kirby.getChangeType()==1){
+        if(m_kirby.getChangeType()==1 && !m_kirby.isDefault()){
             sf::IntRect& currentRect = m_currentAnimation->attackAnimation.update(deltaTime);
             sf::FloatRect bounds = m_kirby.getBounds();
             sf::Vector2f pos = m_kirby.getPos();
@@ -555,7 +561,7 @@ void GameLoop::update() {
                     m_currentAnimation->jumpAnimation.play(0.1f, false); //重置跳跃动画
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && !m_kirby.getIsAttacking() && m_kirby.isAlive() && !m_kirby.getIsDevouring()) {
-                if(m_kirby.getChangeType()==1 && (m_kirby.isFlying()|| m_kirby.getStartFly()||!m_kirby.getIsGround())){
+                if((m_kirby.getChangeType()==1 && !m_kirby.isDefault()) && (m_kirby.isFlying()|| m_kirby.getStartFly()||!m_kirby.getIsGround())){
                     //如果闪电卡比飞行或者起跳状态攻击，不反应
                 }else {
                     // m_kirby.update(deltaTime, m_background);
@@ -695,16 +701,6 @@ void GameLoop::renderGameWorld(){
     //关卡文本
     m_levelText.setString("Level: " + std::to_string(m_currentLevel));
     m_window.draw(m_levelText);
-    // 关卡切换时的渐隐效果
-    // if (m_isLoadingNextLevel) {
-    //     m_fadeOverlay.setFillColor(sf::Color(0, 0, 0, m_fadeAlpha));
-    //     m_window.draw(m_fadeOverlay);
-    //     m_fadeAlpha += 1; // 调整速度
-    //     if (m_fadeAlpha >= 255) {
-    //         m_fadeAlpha = 0;
-    //         m_isLoadingNextLevel = false;
-    //     }
-    // }
     //绘制苹果
     for (const auto& apple : m_apples) {
         if (!apple.collected) {
